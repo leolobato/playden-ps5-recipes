@@ -1,0 +1,45 @@
+{
+  "recipe_id": "community-steam-3629780-mouse-720p",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "3629780",
+    "name": "Tingus Goose"
+  },
+  "name": "Tingus Goose",
+  "launch_entries": [
+    {
+      "id": "game",
+      "label": "Tingus-Game.exe",
+      "executable": "Tingus-Game.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "{resolution}",
+  "resolution_arguments": "-screen-width {w} -screen-height {h}",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "unity,d3d11",
+  "defaults": {
+    "controller_preset": "mouse",
+    "resolution": "1280x720",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "Tingus-Game.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Mouse preset at 1280×720",
+    "tested_kit": "0.12",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-03",
+    "status": "works",
+    "notes": "Starts Tingus-Game.exe directly (the default launcher fails). Also set 1280×720 in the game's own video settings, then start it again. The left stick moves the pointer; Cross clicks and holds.",
+    "author": "leolobato",
+    "contributors": []
+  }
+}

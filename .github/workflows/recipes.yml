@@ -1,0 +1,100 @@
+# SPDX-License-Identifier: CC0-1.0
+# Checks pull requests and pushes; on a release tag, builds and attaches index.json and recipes.zip.
+name: Recipes
+
+on:
+  pull_request:
+  push:
+    branches: ['main', 'feat/**']
+    tags: ['r*']
+
+jobs:
+  check:
+    if: ${{ !startsWith(github.ref, 'refs/tags/') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Python
+        run: |
+          command -v python3 >/dev/null || { apt-get update -q && apt-get install -yq python3; }
+          python3 --version
+
+      # Playden's community_recipe_check isn't built in CI yet (it may need macOS). Set the PLAYDEN_CHECKER
+      # variable to its path on a runner that has it; until then the checks below run without it.
+      - name: Find Playden's checker
+        id: checker
+        env:
+          PLAYDEN_CHECKER: ${{ vars.PLAYDEN_CHECKER }}
+        run: |
+          if [ -n "$PLAYDEN_CHECKER" ] && [ -x "$PLAYDEN_CHECKER" ]; then
+            echo "args=--checker $PLAYDEN_CHECKER" >> "$GITHUB_OUTPUT"
+          else
+            echo "community_recipe_check not available: skipping Playden's own checks"
+          fi
+
+      - name: Unit tests
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+
+      - name: Check changed recipes
+        if: github.event_name == 'pull_request'
+        run: >-
+          python3 scripts/check.py --base-ref "origin/${{ github.base_ref }}" --labels-out labels.txt
+          ${{ steps.checker.outputs.args }}
+
+      - name: Check all recipes
+        if: github.event_name != 'pull_request'
+        run: python3 scripts/check.py ${{ steps.checker.outputs.args }}
+
+      - name: Label the pull request (GitHub)
+        if: github.event_name == 'pull_request' && github.server_url == 'https://github.com'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          while IFS= read -r label; do
+            [ -n "$label" ] && gh pr edit "${{ github.event.pull_request.number }}" --add-label "$label"
+          done < labels.txt
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/r')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Python
+        run: |
+          command -v python3 >/dev/null || { apt-get update -q && apt-get install -yq python3; }
+          python3 --version
+
+      - name: Unit tests
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+
+      # The release time is the tagged commit's, so a rebuild gives the same index.json. revisions.lst and slugs.lst
+      # are committed before tagging; a change here means the tag was made without them.
+      - name: Build recipes.zip and index.json
+        run: |
+          python3 scripts/build_release.py --out out --now "$(git log -1 --format=%ct)"
+          if ! git diff --quiet -- revisions.lst slugs.lst || [ -n "$(git ls-files --others -- revisions.lst slugs.lst)" ]; then
+            echo "::warning::revisions.lst or slugs.lst weren't updated before tagging; run scripts/build_release.py and commit them first"
+          fi
+
+      - name: Attach to the release (GitHub)
+        if: github.server_url == 'https://github.com'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="${{ github.ref_name }}"
+          gh release view "$tag" >/dev/null 2>&1 || gh release create "$tag" --verify-tag --title "Recipes $tag" \
+            --notes "Community recipes. Playden downloads index.json and recipes.zip from the latest release."
+          gh release upload "$tag" out/recipes.zip out/index.json --clobber

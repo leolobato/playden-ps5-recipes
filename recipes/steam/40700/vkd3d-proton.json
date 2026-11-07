@@ -1,0 +1,45 @@
+{
+  "recipe_id": "community-steam-40700-vkd3d-proton",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "40700",
+    "name": "Machinarium"
+  },
+  "name": "Machinarium",
+  "launch_entries": [
+    {
+      "id": "game",
+      "label": "Machinarium.exe",
+      "executable": "Machinarium.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "d3d12",
+  "defaults": {
+    "d3d12": "vkd3d-proton",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "Machinarium.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Direct3D 12 through vkd3d-proton",
+    "tested_kit": "0.11",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-06",
+    "status": "works",
+    "notes": "Wine's own Direct3D 12 doesn't draw this game: vkd3d-proton does. The controller moves the cursor in the menus and scenes.",
+    "author": "leolobato",
+    "contributors": [],
+    "min_kit": "0.11"
+  }
+}

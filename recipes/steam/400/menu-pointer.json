@@ -1,0 +1,45 @@
+{
+  "recipe_id": "community-steam-400-menu-pointer",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "400",
+    "name": "Portal"
+  },
+  "name": "Portal",
+  "launch_entries": [
+    {
+      "id": "game",
+      "label": "hl2.exe",
+      "executable": "hl2.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "{resolution} -game portal -steam",
+  "resolution_arguments": "-w {w} -h {h}",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "source,d3d9",
+  "defaults": {
+    "button.touchpad": "mouse_left",
+    "pointer_stick": "right_stick",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "hl2.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Right stick pointer for the menus",
+    "tested_kit": "0.13",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-10-25",
+    "status": "works",
+    "notes": "The right stick moves the pointer in the menus and the touchpad clicks. No button opens the options (Esc) during play. Reports: https://github.com/leolobato/playden-ps5/issues/18 and https://github.com/leolobato/playden-ps5/issues/143",
+    "author": "Cevap05",
+    "contributors": []
+  }
+}

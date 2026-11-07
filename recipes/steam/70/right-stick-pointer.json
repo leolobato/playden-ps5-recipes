@@ -1,0 +1,47 @@
+{
+  "recipe_id": "community-steam-70-right-stick-pointer",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "70",
+    "name": "Half-Life"
+  },
+  "name": "Half-Life",
+  "launch_entries": [
+    {
+      "id": "game",
+      "label": "hl.exe",
+      "executable": "hl.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "-steam",
+  "resolution_arguments": "",
+  "dll_overrides": "",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "opengl",
+  "detected": "opengl",
+  "defaults": {
+    "button.cross": "space",
+    "button.l2": "mouse_right",
+    "button.r2": "mouse_left",
+    "pointer_stick": "right_stick",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "hl.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Right stick pointer, keys on the pad",
+    "tested_kit": "0.13",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-10-25",
+    "status": "works",
+    "notes": "Cross jumps (Space), R2 shoots (left click), L2 is the secondary fire (right click), and the right stick moves the pointer in the menus. Report: https://github.com/leolobato/playden-ps5/issues/139",
+    "author": "isaacm0880",
+    "contributors": []
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "recipe_id": "community-steam-1592280-opengl",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "1592280",
+    "name": "Selaco"
+  },
+  "name": "Selaco",
+  "launch_entries": [
+    {
+      "id": "game",
+      "label": "SELACO.exe",
+      "executable": "SELACO.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "opengl",
+  "detected": "opengl",
+  "defaults": {
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "SELACO.exe",
+  "community": {
+    "format_version": 1,
+    "title": "OpenGL, the game's own program",
+    "tested_kit": "0.12",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-06",
+    "status": "works",
+    "notes": "Starts SELACO.exe directly and draws with OpenGL. Plays with the controller; the game's 'slow system' graphics preset runs best.",
+    "author": "leolobato",
+    "contributors": []
+  }
+}
