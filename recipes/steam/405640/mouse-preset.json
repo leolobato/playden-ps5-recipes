@@ -1,0 +1,44 @@
+{
+  "recipe_id": "community-steam-405640-mouse-preset",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "405640",
+    "name": "Pony Island"
+  },
+  "name": "Pony Island",
+  "launch_entries": [
+    {
+      "id": "game",
+      "label": "PonyIsland.exe",
+      "executable": "PonyIsland.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "{resolution}",
+  "resolution_arguments": "-screen-width {w} -screen-height {h}",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "unity,d3d11",
+  "defaults": {
+    "controller_preset": "mouse",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "PonyIsland.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Mouse preset",
+    "tested_kit": "0.12",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-10-27",
+    "status": "works",
+    "notes": "A mouse game: the left stick moves the pointer, Cross clicks, Circle right-clicks, Options is Enter.",
+    "author": "leolobato",
+    "contributors": []
+  }
+}

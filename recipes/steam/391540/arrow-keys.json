@@ -1,0 +1,44 @@
+{
+  "recipe_id": "community-steam-391540-arrow-keys",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "391540",
+    "name": "Undertale"
+  },
+  "name": "Undertale",
+  "launch_entries": [
+    {
+      "id": "game",
+      "label": "UNDERTALE.exe",
+      "executable": "UNDERTALE.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "gamemaker,d3d9",
+  "defaults": {
+    "controller_preset": "arrows",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "UNDERTALE.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Arrow keys on the D-pad",
+    "tested_kit": "0.10",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-05",
+    "status": "works",
+    "notes": "The game's own controller support doesn't see the DualSense yet, so the D-pad sends the arrow keys: Cross is Z (confirm), Circle is X (back), Triangle is C (menu).",
+    "author": "leolobato",
+    "contributors": []
+  }
+}
