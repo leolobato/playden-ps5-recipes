@@ -395,6 +395,17 @@ def launch_view(data):
             {key: defaults.get(key) for key in LAUNCH_DEFAULTS})
 
 
+def new_file_starts_game(data):
+    """Whether a new recipe changes how the game starts: one with its program does; a settings-only recipe (format 2)
+    only through the program rows it sets in defaults, as Playden's checker flags it."""
+    if not isinstance(data, dict):
+        return True
+    community = data.get("community") if isinstance(data.get("community"), dict) else {}
+    if community.get("format_version") != 2:
+        return True
+    return any(value is not None for group in launch_view(data) for value in group.values())
+
+
 def parse_checker_output(text, repo):
     """Reads community_recipe_check --json output into {relative path: {"refusals", "flags", "command", "ok"}}.
 
@@ -486,7 +497,8 @@ def check_files(paths, repo=REPO, base_ref=None, checker=None):
                                        % (result.slug, result.game))
             if base_ref and checker is None:
                 if base is None:
-                    result.labels.add(LABEL_STARTS_GAME)
+                    if new_file_starts_game(result.data):
+                        result.labels.add(LABEL_STARTS_GAME)
                 else:
                     try:
                         before = json.loads(base.decode("utf-8"))
@@ -496,7 +508,8 @@ def check_files(paths, repo=REPO, base_ref=None, checker=None):
                         result.labels.add(LABEL_STARTS_GAME)
             elif checker is None:
                 # Nothing to compare with: treat the file as new.
-                result.labels.add(LABEL_STARTS_GAME)
+                if new_file_starts_game(result.data):
+                    result.labels.add(LABEL_STARTS_GAME)
         results.append(result)
 
     if checker and results:

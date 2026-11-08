@@ -160,6 +160,19 @@ class ContentTest(CheckTestCase):
                 path = self.edited("settings-only.json", lambda d: d["defaults"].update({name: "x"}), slug="mouse-preset")
                 self.assertRefused(path, "defaults sets %s in a settings-only recipe" % name)
 
+    def test_new_settings_only_file_is_labelled_by_its_program_rows(self):
+        # Without Playden's checker: a new settings-only file changes how the game starts only through program rows.
+        base = self.repo.commit("base")
+        plain = self.edited("settings-only.json", lambda d: [d["defaults"].pop(k) for k in ("program", "program_arguments")],
+                            slug="mouse-preset")
+        for kwargs in ({"base_ref": base}, {}):
+            with self.subTest(**kwargs):
+                (result,) = self.check(plain, **kwargs)
+                self.assertEqual(result.labels, set())
+        named = self.repo.place("settings-only.json", slug="named-program")
+        (result,) = self.check(named, base_ref=base)
+        self.assertEqual(result.labels, {check.LABEL_STARTS_GAME})
+
     def test_settings_only_program_rows_are_labelled(self):
         path = self.repo.place("settings-only.json", slug="mouse-preset")
         base = self.repo.commit("base")
