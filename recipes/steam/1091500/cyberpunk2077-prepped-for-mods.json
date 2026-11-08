@@ -1,0 +1,44 @@
+{
+  "recipe_id": "community-steam-1091500-cyberpunk2077-prepped-for-mods",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "1091500",
+    "name": "Cyberpunk 2077"
+  },
+  "name": "Cyberpunk 2077",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "Cyberpunk2077.exe",
+      "executable": "bin/x64/Cyberpunk2077.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n;winmm=n,b;d3d12,d3d12core=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "d3d12,dxgi",
+  "defaults": {
+    "d3d12": "vkd3d-proton",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "bin/x64/Cyberpunk2077.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Cyberpunk2077 - Prepped For Mods",
+    "tested_kit": "0.20",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-08",
+    "status": "works",
+    "notes": "Changes some libraries so mods load, verified for multiplayer mod",
+    "author": "isaacm080",
+    "contributors": []
+  }
+}
