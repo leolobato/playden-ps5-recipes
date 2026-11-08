@@ -12,37 +12,38 @@ import release_notes
 
 
 def index(*games):
-    """games: (name, [(recipe_id, revision), ...])"""
+    """games: (name, [(recipe_id, revision[, author[, contributors]]), ...])"""
+    def recipe(rid, rev, author="", contributors=()):
+        return {"id": rid, "revision": rev, "author": author, "contributors": list(contributors)}
     return {"format_version": 2, "games": [
-        {"store": "steam", "key": str(n), "name": name,
-         "recipes": [{"id": rid, "revision": rev} for rid, rev in members]}
+        {"store": "steam", "key": str(n), "name": name, "recipes": [recipe(*member) for member in members]}
         for n, (name, members) in enumerate(games)]}
 
 
-OLD = index(("Portal", [("community-steam-400-a", "r1")]),
-            ("Half-Life", [("community-steam-70-b", "r1"), ("community-steam-70-c", "r1")]))
-NEW = index(("Portal", [("community-steam-400-a", "r2")]),
+OLD = index(("Portal", [("community-steam-400-a", "r1", "alice")]),
+            ("Half-Life", [("community-steam-70-b", "r1"), ("community-steam-70-c", "r1", "carol")]))
+NEW = index(("Portal", [("community-steam-400-a", "r2", "alice", ["bob"])]),
             ("Half-Life", [("community-steam-70-b", "r1")]),
-            ("Cyberpunk 2077", [("community-steam-1091500-d", "r1")]))
+            ("Cyberpunk 2077", [("community-steam-1091500-d", "r1", "dave")]))
 
 
 class ChangesTest(unittest.TestCase):
     def test_groups_by_id_and_revision(self):
         added, updated, removed = release_notes.changes(OLD, NEW)
-        self.assertEqual(added, [("Cyberpunk 2077", "community-steam-1091500-d")])
-        self.assertEqual(updated, [("Portal", "community-steam-400-a")])
-        self.assertEqual(removed, [("Half-Life", "community-steam-70-c")])
+        self.assertEqual(added, [("Cyberpunk 2077", "community-steam-1091500-d", "by dave")])
+        self.assertEqual(updated, [("Portal", "community-steam-400-a", "by alice, with bob")])
+        self.assertEqual(removed, [("Half-Life", "community-steam-70-c", "by carol")])
 
     def test_without_old_index_everything_is_added(self):
         added, updated, removed = release_notes.changes(None, NEW)
-        self.assertEqual([i for _, i in added],
+        self.assertEqual([i for _, i, _ in added],
                          ["community-steam-1091500-d", "community-steam-70-b", "community-steam-400-a"])
         self.assertEqual((updated, removed), ([], []))
 
     def test_removed_uses_the_old_game_name(self):
         renamed = index(("Half-Life 1", [("community-steam-70-b", "r1")]))
         _, _, removed = release_notes.changes(OLD, renamed)
-        self.assertIn(("Half-Life", "community-steam-70-c"), removed)
+        self.assertIn(("Half-Life", "community-steam-70-c", "by carol"), removed)
 
 
 class NotesTest(unittest.TestCase):
@@ -52,16 +53,28 @@ class NotesTest(unittest.TestCase):
             "",
             "### Added",
             "",
-            "- Cyberpunk 2077: `community-steam-1091500-d`",
+            "- Cyberpunk 2077: `community-steam-1091500-d` by dave",
             "",
             "### Updated",
             "",
-            "- Portal: `community-steam-400-a`",
+            "- Portal: `community-steam-400-a` by alice, with bob",
             "",
             "### Removed",
             "",
-            "- Half-Life: `community-steam-70-c`",
+            "- Half-Life: `community-steam-70-c` by carol",
         ]) + "\n")
+
+    def test_credit(self):
+        self.assertEqual(release_notes.credit({"author": "alice"}), "by alice")
+        self.assertEqual(release_notes.credit({"author": "alice", "contributors": ["bob", "carol"]}),
+                         "by alice, with bob and carol")
+        self.assertEqual(release_notes.credit({"author": "alice", "contributors": ["alice"]}), "by alice")
+        self.assertEqual(release_notes.credit({"contributors": ["bob"]}), "by bob")
+        self.assertEqual(release_notes.credit({"author": "", "contributors": []}), "")
+        self.assertEqual(release_notes.credit({}), "")
+
+    def test_a_recipe_without_author_has_no_credit(self):
+        self.assertIn("- Half-Life: `community-steam-70-b`\n", release_notes.notes(None, NEW))
 
     def test_empty_groups_are_left_out(self):
         text = release_notes.notes(OLD, OLD)
