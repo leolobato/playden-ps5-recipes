@@ -147,6 +147,8 @@ Releases are tagged `r<YYYYMMDD>.<n>`. Before tagging, the maintainer runs `scri
 updated `revisions.lst` and `slugs.lst`. CI builds and attaches the files when the tag is pushed. `make release` does
 all of it from a clean `main` that matches GitHub's, with the commit and tag signed by the maintainer's GPG key;
 `make release-dry-run` shows what it would record, and `make release-watch` follows CI until the release has its files.
+The **Release** workflow (Actions > Release > Run workflow on `main`, or the Playden admin page) does the same in CI,
+signed with the maintainer's release key from the `release` environment, and attaches the files itself.
 The release notes list what's new since the previous release (recipes added, updated and removed, by game and recipe
 ID), from `scripts/release_notes.py` comparing the two releases' `index.json`; the dry run previews them.
 

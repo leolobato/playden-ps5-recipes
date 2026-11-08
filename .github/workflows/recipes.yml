@@ -80,49 +80,9 @@ jobs:
       - name: Unit tests
         run: python3 -m unittest discover -s scripts -p 'test_*.py'
 
-      # The release time is the tagged commit's, so a rebuild gives the same index.json. revisions.lst and slugs.lst
-      # are committed before tagging; a change here means the tag was made without them.
-      - name: Build recipes.zip and index.json
-        run: |
-          python3 scripts/build_release.py --out out --now "$(git log -1 --format=%ct)"
-          if ! git diff --quiet -- revisions.lst slugs.lst || [ -n "$(git ls-files --others -- revisions.lst slugs.lst)" ]; then
-            echo "::warning::revisions.lst or slugs.lst weren't updated before tagging; run scripts/build_release.py and commit them first"
-          fi
-
-      # What's new: this index.json against the one attached to the previous r* tag (the nearest one before this
-      # commit). Without a previous release, or if it has no index.json, every recipe counts as added.
-      - name: Write the release notes
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          tag="${{ github.ref_name }}"
-          prev="$(git describe --tags --abbrev=0 --match 'r[0-9]*' "$tag^" 2>/dev/null || true)"
-          args=()
-          if [ -n "$prev" ]; then
-            args+=(--since "$prev")
-            if [ "${{ github.server_url }}" = https://github.com ] \
-               && gh release download "$prev" --pattern index.json --dir prev >/dev/null 2>&1; then
-              args+=(--old prev/index.json)
-            else
-              echo "::warning::couldn't download index.json from $prev; listing every recipe as added"
-            fi
-          fi
-          {
-            echo "Community recipes. Playden downloads index.json and recipes.zip from the latest release."
-            echo
-            python3 scripts/release_notes.py --new out/index.json ${args[@]+"${args[@]}"}
-          } > notes.md
-          cat notes.md
-
-      - name: Attach to the release (GitHub)
+      # Builds the files from the tag and attaches them with notes listing what's new (also run by release.yml).
+      - name: Build and attach to the release
         if: github.server_url == 'https://github.com'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          tag="${{ github.ref_name }}"
-          if gh release view "$tag" >/dev/null 2>&1; then
-            gh release edit "$tag" --notes-file notes.md
-          else
-            gh release create "$tag" --verify-tag --title "Recipes $tag" --notes-file notes.md
-          fi
-          gh release upload "$tag" out/recipes.zip out/index.json --clobber
+        run: scripts/attach_release.sh "${{ github.ref_name }}"
