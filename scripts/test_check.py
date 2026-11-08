@@ -116,6 +116,59 @@ class ContentTest(CheckTestCase):
         self.assertLess(check.kit_version_key("0.9"), check.kit_version_key("0.12"))
         self.assertEqual(check.kit_version_key("0.12-dev.20261022.1"), check.kit_version_key("0.12"))
 
+    def test_settings_only_recipe_passes(self):
+        # Format 2: no program of its own; its program rows are defaults.
+        path = self.repo.place("settings-only.json", slug="mouse-preset")
+        self.assertEqual(self.refusals(path), [])
+
+    def test_format_versions(self):
+        for version in (0, 3, "2", True, None):
+            with self.subTest(version=version):
+                path = self.repo.place("good.json")
+                data = json.loads(self.repo.read(path))
+                data["community"]["format_version"] = version
+                self.repo.write(path, json.dumps(data))
+                self.assertRefused(path, "community.format_version must be 1 (a recipe with its program) or 2")
+
+    def edited(self, fixture, change, slug="120hz-left-stick-pointer"):
+        path = self.repo.place(fixture, slug=slug)
+        data = json.loads(self.repo.read(path))
+        change(data)
+        self.repo.write(path, json.dumps(data, indent=2))
+        return path
+
+    def test_format_1_needs_its_program(self):
+        for name in ("launch_entries", "executable"):
+            with self.subTest(name=name):
+                path = self.edited("good.json", lambda d: d.pop(name))
+                self.assertRefused(path, "%s is missing: a format_version 1 recipe names its program" % name)
+        path = self.edited("good.json", lambda d: d["defaults"].update(program="Other.exe"))
+        self.assertRefused(path, "defaults sets program: put the program")
+
+    def test_settings_only_refuses_what_playden_fills_in(self):
+        good = json.loads((check.REPO / "tests" / "fixtures" / "good.json").read_text(encoding="utf-8"))
+        for name in check.FILLED_FIELDS:
+            with self.subTest(name=name):
+                path = self.edited("settings-only.json", lambda d: d.update({name: good[name]}), slug="mouse-preset")
+                self.assertRefused(path, "can't carry %s: Playden takes it" % name)
+        for name, value in (("registry", {}), ("ini", {}), ("game_files", []), ("steam_api_copies", [])):
+            with self.subTest(name=name):
+                path = self.edited("settings-only.json", lambda d: d.update({name: value}), slug="mouse-preset")
+                self.assertRefused(path, "can't carry %s: only a recipe with its own program" % name)
+        for name in check.SETTINGS_ONLY_REFUSED_DEFAULTS:
+            with self.subTest(default=name):
+                path = self.edited("settings-only.json", lambda d: d["defaults"].update({name: "x"}), slug="mouse-preset")
+                self.assertRefused(path, "defaults sets %s in a settings-only recipe" % name)
+
+    def test_settings_only_program_rows_are_labelled(self):
+        path = self.repo.place("settings-only.json", slug="mouse-preset")
+        base = self.repo.commit("base")
+        (result,) = self.check(path, base_ref=base)
+        self.assertEqual(result.labels, set())
+        self.edited("settings-only.json", lambda d: d["defaults"].update(program="Bin/Other.exe"), slug="mouse-preset")
+        (result,) = self.check(path, base_ref=base)
+        self.assertEqual(result.labels, {check.LABEL_STARTS_GAME})
+
     def test_locked_must_be_empty(self):
         self.assertRefused(self.repo.place("locked.json"), "locked must be empty")
 

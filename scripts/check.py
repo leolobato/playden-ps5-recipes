@@ -8,7 +8,8 @@ Usage:
 With no files, it checks every file under recipes/, or with --base-ref only the files that differ from that ref.
 Each recipe must sit at recipes/<store>/<key>/<slug>.json, with recipe_id community-<store>-<key>-<slug> and a
 `game` object naming the same store and key, real kit versions, no locked rows, and a slug that was never used by
-another recipe of the same game (slugs.lst).
+another recipe of the same game (slugs.lst). community.format_version 1 names its program (launch_entries,
+executable); 2 is a settings-only recipe, which may not carry what Playden fills in from its own recipe.
 
 Stores and keys: steam (the app ID), gog (the product ID), epic (the catalog item ID, 32 lowercase hex digits) and
 imported (a name key made from the game's name by name_key()).
@@ -72,6 +73,19 @@ LAUNCH_FIELDS = ("launch_entries", "executable", "arguments", "resolution_argume
 # Game settings rows in `defaults` that do the same.
 LAUNCH_DEFAULTS = ("environment", "launch_option", "program", "program_folder", "program_arguments",
                    "extra_arguments", "library_overrides", "registry_dll_overrides")
+# community.format_version: 1, a recipe with its program (launch_entries and executable); 2, a settings-only recipe,
+# whose program Playden fills in from its own recipe for the player's copy.
+FORMAT_VERSIONS = (1, 2)
+# What a format 1 recipe must carry: its program.
+PROGRAM_FIELDS = ("launch_entries", "executable")
+# What a settings-only recipe can't carry: what Playden fills in, and what belongs to a recipe with its own program.
+FILLED_FIELDS = ("launch_entries", "executable", "architecture", "runtime", "prefix", "detected", "dll_overrides",
+                 "arguments", "resolution_arguments")
+PROGRAM_ONLY_FIELDS = ("registry", "ini", "game_files", "steam_api_copies")
+# Game settings rows a settings-only recipe can't set: Playden's recipe has them, or (graphics) the recipe's own field.
+SETTINGS_ONLY_REFUSED_DEFAULTS = ("arguments", "extra_arguments", "dll_overrides", "architecture", "graphics")
+# Game settings rows a format 1 recipe keeps in its own fields instead.
+PROGRAM_DEFAULTS = ("program", "program_folder", "program_arguments", "arguments", "extra_arguments", "dll_overrides")
 # Words in a checker flag that mean the same thing.
 LAUNCH_FLAG_WORDS = ("program", "argument", "override", "dll", "environment", "registry", "launch", "executable")
 
@@ -277,8 +291,12 @@ def check_content(result, raw):
         result.refusals.append("the community block is missing")
         return
     where = "community."
-    if community.get("format_version") != 1:
-        result.refusals.append("community.format_version must be 1")
+    format_version = community.get("format_version")
+    if type(format_version) is not int or format_version not in FORMAT_VERSIONS:
+        result.refusals.append("community.format_version must be 1 (a recipe with its program) or 2 (a settings-only "
+                               "recipe)")
+    else:
+        check_format(result, data, format_version)
     # Title and author are optional: Playden lists an untitled recipe as "Recipe from <author>", and one without
     # an author as "from the community".
     title = text_field(community, "title", result, where)
@@ -308,6 +326,35 @@ def check_content(result, raw):
     if status not in STATUSES:
         result.refusals.append("community.status %r must be one of %s" % (status, ", ".join(STATUSES)))
     text_field(community, "notes", result, where)
+
+
+def check_format(result, data, format_version):
+    """The fields each format version needs or refuses (Playden's ParseCommunityRecipe and community rules)."""
+    defaults = data.get("defaults") if isinstance(data.get("defaults"), dict) else {}
+    if format_version == 1:
+        for name in PROGRAM_FIELDS:
+            if name not in data:
+                result.refusals.append("%s is missing: a format_version 1 recipe names its program (a recipe without "
+                                       "one is format_version 2, settings-only)" % name)
+        for name in PROGRAM_DEFAULTS:
+            if name in defaults:
+                result.refusals.append("defaults sets %s: put the program, its folder, arguments and library overrides "
+                                       "in launch_entries, arguments and dll_overrides" % name)
+        return
+    for name in FILLED_FIELDS:
+        if name in data:
+            result.refusals.append("a settings-only recipe (format_version 2) can't carry %s: Playden takes it from its "
+                                   "own recipe for the copy" % name)
+    for name in PROGRAM_ONLY_FIELDS:
+        if name in data:
+            result.refusals.append("a settings-only recipe (format_version 2) can't carry %s: only a recipe with its own "
+                                   "program (format_version 1) can" % name)
+    for name in SETTINGS_ONLY_REFUSED_DEFAULTS:
+        if name in defaults:
+            hint = ('set the recipe\'s "graphics" field instead' if name == "graphics" else
+                    "Playden takes it from its own recipe for the copy; name a program with defaults program and its "
+                    "arguments with program_arguments")
+            result.refusals.append("defaults sets %s in a settings-only recipe: %s" % (name, hint))
 
 
 def check_game(result, data, store, key):

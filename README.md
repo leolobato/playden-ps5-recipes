@@ -75,7 +75,7 @@ The `community` block says who made the recipe and how it was tested:
 
 | Field | Meaning |
 |---|---|
-| `format_version` | `1`. |
+| `format_version` | `1` for a recipe with its program, `2` for a [settings-only recipe](#settings-only-recipes). |
 | `title` | Optional. The name Playden shows in the list of recipes, 1–60 characters. Without one, Playden shows "Recipe from <author>". |
 | `author` | Optional. Who first shared the recipe. Without one, the recipe is shown as "from the community". |
 | `contributors` | People whose changes were merged into it later. |
@@ -87,6 +87,40 @@ The `community` block says who made the recipe and how it was tested:
 
 `locked` stays empty in a community recipe. The full format is in
 Playden's [docs/community-recipes.md](https://github.com/leolobato/playden-ps5/blob/main/docs/community-recipes.md).
+
+### Settings-only recipes
+
+A settings-only recipe (`format_version` 2) changes Game settings and leaves the program to Playden. Use one when the
+settings a game needs are known (the Mouse preset, OpenGL, vkd3d-proton, a resolution) but not its program file, for
+example from a compatibility report that doesn't name the file. Playden fills in the program and everything that goes
+with it from its own recipe for the player's copy.
+
+```json
+{
+  "recipe_id": "community-steam-274520-mouse-preset",
+  "recipe_version": 1,
+  "game": {"store": "steam", "key": "274520", "name": "Darkwood"},
+  "name": "Darkwood",
+  "defaults": {"controller_preset": "mouse"},
+  "locked": [],
+  "community": {"format_version": 2, "title": "Mouse preset", "tested_kit": "0.19", "status": "works", "notes": "",
+                "author": "", "contributors": []}
+}
+```
+
+- Leave out `launch_entries`, `executable`, `architecture`, `runtime`, `prefix`, `detected`, `dll_overrides`,
+  `arguments` and `resolution_arguments`: Playden takes them from its own recipe. `registry`, `ini`, `game_files` and
+  `steam_api_copies` belong to a recipe with its own program, so they are refused too.
+- `graphics` may be set (`"graphics": "opengl"`); without it, Playden's applies. Put it in that field, not in
+  `defaults`. vkd3d-proton is the `d3d12` default.
+- A program may be named with the `program` default (a path in the game folder), with `program_arguments` and
+  `program_folder`, or with the `launch_option` default (one of Playden's launch options). When the player's copy
+  doesn't have that program, Playden's program starts. The `arguments`, `extra_arguments`, `dll_overrides`,
+  `architecture` and `graphics` defaults are refused.
+- Only Playden builds that read format 2 offer these recipes; older builds skip the file and load the rest.
+  `index.json` keeps its own `format_version` 2.
+
+Shares from Playden are always format 1: an export has its program.
 
 ## Share your settings
 
@@ -101,7 +135,8 @@ Sharing straight from Playden ("Share recipe") is coming. Until then:
 5. Check that the file has the `game` object described above, pick a slug, set `recipe_id` to
    `community-<store>-<key>-<slug>`, save the file as `recipes/<store>/<key>/<slug>.json` and open a pull request.
 
-Don't edit the program, arguments or overrides by hand: export them from a run that works. To improve an existing
+Don't edit the program, arguments or overrides by hand: export them from a run that works. When only the settings
+are known and not the program, write a [settings-only recipe](#settings-only-recipes) instead. To improve an existing
 recipe, change its file and add your name to `contributors`.
 
 You can also attach the file to a [test report](https://github.com/leolobato/playden-ps5/issues/new/choose) and the
@@ -112,7 +147,9 @@ maintainer will add it.
 Every pull request runs `scripts/check.py` on the recipes it changes. It refuses a file whose store, key, slug,
 `recipe_id` and `game` disagree, an unknown store, a key that doesn't follow its store's rule, a bad or reused slug,
 a `made_on` that isn't another store, the old `app_id` and `steam_appid` fields, a kit version that isn't like
-`0.12`, a non-empty `locked` list or a file over 16 KB. A pull request that changes the program, arguments, library
+`0.12`, a non-empty `locked` list or a file over 16 KB. It applies the rules of the file's `format_version`: a format 1
+recipe needs `launch_entries` and `executable` and keeps its program rows out of `defaults`; a settings-only recipe
+(format 2) may not carry the fields Playden fills in. A pull request that changes the program, arguments, library
 overrides, environment or registry values gets the label "changes how the game starts", and the maintainer reviews
 those lines closely.
 
