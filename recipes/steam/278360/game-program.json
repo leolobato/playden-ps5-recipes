@@ -1,0 +1,42 @@
+{
+  "recipe_id": "community-steam-278360-game-program",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "278360",
+    "name": "A Story About My Uncle"
+  },
+  "name": "A Story About My Uncle",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "ASAMU-Win32-Shipping.exe",
+      "executable": "Binaries/Win32/ASAMU-Win32-Shipping.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "defaults": {
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "Binaries/Win32/ASAMU-Win32-Shipping.exe",
+  "community": {
+    "format_version": 1,
+    "title": "The game, not Lightmass",
+    "tested_kit": "0.12",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-10-20",
+    "status": "works",
+    "notes": "Playden picks UnrealLightmass.exe on its own. From the maintainer's test on the compatibility list.",
+    "author": "leolobato",
+    "contributors": []
+  }
+}

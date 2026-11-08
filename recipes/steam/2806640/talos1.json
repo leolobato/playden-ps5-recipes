@@ -1,0 +1,45 @@
+{
+  "recipe_id": "community-steam-2806640-talos1",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "2806640",
+    "name": "The Talos Principle: Reawakened"
+  },
+  "made_on": "imported",
+  "name": "The Talos Principle: Reawakened",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "Talos1-Win64-Shipping.exe",
+      "executable": "Talos1/Binaries/Win64/Talos1-Win64-Shipping.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "-dx11",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n;d3d12,d3d12core=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "unreal5,d3d11,d3d12,d3d9,dxgi,opengl,vulkan,dx12",
+  "defaults": {
+    "d3d12": "vkd3d-proton",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "Talos1/Binaries/Win64/Talos1-Win64-Shipping.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Talos 1",
+    "tested_kit": "0.15",
+    "tested_firmware": "11.60",
+    "tested_date": "2026-10-31",
+    "status": "works",
+    "notes": "Talos1.exe, Unreal's launcher, can't start the game on the console. An imported copy also needs Game settings › Steam app ID = 2806640, or it stops at \"Loading Steam SDK\". From the test report https://github.com/leolobato/playden-ps5/issues/309.",
+    "author": "lordfoul",
+    "contributors": []
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "recipe_id": "community-steam-489830-game-program",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "489830",
+    "name": "Skyrim Special Edition"
+  },
+  "name": "Skyrim Special Edition",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "SkyrimSE.exe",
+      "executable": "SkyrimSE.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "defaults": {
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "SkyrimSE.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Skip the launcher",
+    "tested_kit": "0.16",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-02",
+    "status": "works",
+    "notes": "Existing saves showed up. Tested briefly. From the test report https://github.com/leolobato/playden-ps5/issues/408.",
+    "author": "isaacm0880",
+    "contributors": []
+  }
+}

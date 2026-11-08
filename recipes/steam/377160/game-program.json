@@ -1,0 +1,42 @@
+{
+  "recipe_id": "community-steam-377160-game-program",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "377160",
+    "name": "Fallout 4"
+  },
+  "name": "Fallout 4",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "Fallout4.exe",
+      "executable": "Fallout4.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "defaults": {
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "Fallout4.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Skip the launcher",
+    "tested_kit": "0.10",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-10-14",
+    "status": "works",
+    "notes": "Playden picks Fallout4Launcher.exe on its own. From the maintainer's test on the compatibility list.",
+    "author": "leolobato",
+    "contributors": []
+  }
+}

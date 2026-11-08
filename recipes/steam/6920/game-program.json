@@ -1,0 +1,43 @@
+{
+  "recipe_id": "community-steam-6920-game-program",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "6920",
+    "name": "Deus Ex: Invisible War"
+  },
+  "name": "Deus Ex: Invisible War",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "DX2Main.exe",
+      "executable": "System/DX2Main.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "-NoIMeanItReally",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "unknown",
+  "defaults": {
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "System/DX2Main.exe",
+  "community": {
+    "format_version": 1,
+    "title": "The game program",
+    "tested_kit": "0.18",
+    "tested_firmware": "12.20",
+    "tested_date": "2026-11-04",
+    "status": "works",
+    "notes": "The default, dx2.exe, doesn't start the game. From the test report https://github.com/leolobato/playden-ps5/issues/426.",
+    "author": "EpicKitten",
+    "contributors": []
+  }
+}

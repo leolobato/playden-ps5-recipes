@@ -1,0 +1,42 @@
+{
+  "recipe_id": "community-steam-544580-game-program",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "544580",
+    "name": "BULLET SOUL"
+  },
+  "name": "BULLET SOUL",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "BulletSoulWin.exe",
+      "executable": "BulletSoulWin.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "defaults": {
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "BulletSoulWin.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Skip the launcher",
+    "tested_kit": "0.10",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-10-12",
+    "status": "works",
+    "notes": "Playden picks the launcher, which the controller can't use. If the game was set up with the launcher, use Recreate bottle once. From the maintainer's test on the compatibility list.",
+    "author": "leolobato",
+    "contributors": []
+  }
+}

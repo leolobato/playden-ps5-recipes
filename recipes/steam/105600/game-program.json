@@ -1,0 +1,43 @@
+{
+  "recipe_id": "community-steam-105600-game-program",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "105600",
+    "name": "Terraria"
+  },
+  "name": "Terraria",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "Terraria.exe",
+      "executable": "Terraria.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "opengl",
+  "detected": "xna,d3d9",
+  "defaults": {
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "Terraria.exe",
+  "community": {
+    "format_version": 1,
+    "title": "The game, not the server",
+    "tested_kit": "0.13",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-10-25",
+    "status": "works",
+    "notes": "The default program starts the server. From the test report https://github.com/leolobato/playden-ps5/issues/151.",
+    "author": "isaacm0880",
+    "contributors": []
+  }
+}

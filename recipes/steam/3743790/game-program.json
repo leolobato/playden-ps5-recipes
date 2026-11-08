@@ -1,0 +1,43 @@
+{
+  "recipe_id": "community-steam-3743790-game-program",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "3743790",
+    "name": "Thomas & Friends: Wonders of Sodor"
+  },
+  "made_on": "imported",
+  "name": "Thomas & Friends: Wonders of Sodor",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "WondersOfSodor.exe",
+      "executable": "WindowsNoEditor/TS2Prototype/Binaries/Win64/WondersOfSodor.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "-dx11",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "defaults": {
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "WindowsNoEditor/TS2Prototype/Binaries/Win64/WondersOfSodor.exe",
+  "community": {
+    "format_version": 1,
+    "title": "The game program",
+    "tested_kit": "0.13",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-10-28",
+    "status": "works",
+    "notes": "TS2Prototype.exe, Unreal's launcher, can't start the game on the console. An imported copy also needs Game settings › Steam app ID = 3743790. From the test report https://github.com/leolobato/playden-ps5/issues/225.",
+    "author": "Blitz-rgg",
+    "contributors": []
+  }
+}

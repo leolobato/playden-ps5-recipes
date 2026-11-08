@@ -1,0 +1,44 @@
+{
+  "recipe_id": "community-steam-1026680-launcher",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "1026680",
+    "name": "FINAL FANTASY VIII - REMASTERED"
+  },
+  "name": "FINAL FANTASY VIII - REMASTERED",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "FFVIII.exe",
+      "executable": "FFVIII.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "opengl",
+  "detected": "opengl",
+  "defaults": {
+    "start_through_launcher": "on",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "FFVIII.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Through its launcher",
+    "tested_kit": "0.18",
+    "tested_firmware": "13.40",
+    "tested_date": "2026-11-05",
+    "status": "works",
+    "notes": "Without the launcher the game stops at \"can't open configuration file\". If the controller does nothing once the game is up, check Game settings › Controller. From the test report https://github.com/leolobato/playden-ps5/issues/460.",
+    "author": "EdgeSync",
+    "contributors": []
+  }
+}
