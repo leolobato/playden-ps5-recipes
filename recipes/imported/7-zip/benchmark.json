@@ -1,0 +1,27 @@
+{
+  "recipe_id": "community-imported-7-zip-benchmark",
+  "recipe_version": 1,
+  "game": {
+    "store": "imported",
+    "key": "7-zip",
+    "name": "7-Zip Benchmark"
+  },
+  "name": "7-Zip Benchmark",
+  "defaults": {
+    "controller_preset": "mouse",
+    "program": "7zG.exe",
+    "program_arguments": "b"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Benchmark",
+    "tested_kit": "0.19",
+    "tested_firmware": "12.20",
+    "tested_date": "2026-11-05",
+    "status": "works",
+    "notes": "Report: https://github.com/leolobato/playden-ps5/issues/673",
+    "author": "EpicKitten",
+    "contributors": []
+  }
+}

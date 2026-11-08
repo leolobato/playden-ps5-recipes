@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-242760-launcher",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "242760",
+    "name": "The Forest"
+  },
+  "name": "The Forest",
+  "defaults": {
+    "start_through_launcher": "on"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Through its launcher",
+    "tested_kit": "0.18",
+    "tested_firmware": "12.20",
+    "tested_date": "2026-11-03",
+    "status": "works",
+    "notes": "Its launch window needs a click. Report: https://github.com/leolobato/playden-ps5/issues/543",
+    "author": "EpicKitten",
+    "contributors": []
+  }
+}

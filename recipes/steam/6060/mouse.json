@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-6060-mouse",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "6060",
+    "name": "Star Wars: Battlefront II (Classic, 2005)"
+  },
+  "name": "Star Wars: Battlefront II (Classic, 2005)",
+  "defaults": {
+    "controller_preset": "mouse"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Mouse preset",
+    "tested_kit": "0.10",
+    "tested_firmware": "13.60",
+    "tested_date": "",
+    "status": "works",
+    "notes": "Left stick moves the pointer, Cross clicks, Options is Enter.",
+    "author": "leolobato",
+    "contributors": []
+  }
+}

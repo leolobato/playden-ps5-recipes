@@ -1,0 +1,26 @@
+{
+  "recipe_id": "community-steam-220-menu-pointer",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "220",
+    "name": "Half-Life 2"
+  },
+  "name": "Half-Life 2",
+  "defaults": {
+    "button.touchpad": "mouse_left",
+    "pointer_stick": "right_stick"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Pointer for the menus",
+    "tested_kit": "0.13",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-10-25",
+    "status": "works",
+    "notes": "-gamepadui doesn't take the controller yet (#271). Report: https://github.com/leolobato/playden-ps5/issues/142",
+    "author": "isaacm0880",
+    "contributors": []
+  }
+}

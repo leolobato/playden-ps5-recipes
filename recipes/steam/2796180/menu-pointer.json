@@ -1,0 +1,26 @@
+{
+  "recipe_id": "community-steam-2796180-menu-pointer",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "2796180",
+    "name": "Silent Breath"
+  },
+  "name": "Silent Breath",
+  "defaults": {
+    "button.r1": "mouse_left",
+    "pointer_stick": "right_stick"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Pointer for the menus",
+    "tested_kit": "0.18",
+    "tested_firmware": "10.01",
+    "tested_date": "2026-11-04",
+    "status": "works",
+    "notes": "The multiplayer and start tape menus need a pointer. Report: https://github.com/leolobato/playden-ps5/issues/610",
+    "author": "sam__in",
+    "contributors": []
+  }
+}

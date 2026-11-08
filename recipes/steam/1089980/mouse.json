@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-1089980-mouse",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "1089980",
+    "name": "The Henry Stickmin Collection"
+  },
+  "name": "The Henry Stickmin Collection",
+  "defaults": {
+    "controller_preset": "mouse"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Mouse preset",
+    "tested_kit": "0.13",
+    "tested_firmware": "13.00",
+    "tested_date": "2026-10-27",
+    "status": "works",
+    "notes": "Report: https://github.com/leolobato/playden-ps5/issues/190",
+    "author": "Shnickelbob",
+    "contributors": []
+  }
+}

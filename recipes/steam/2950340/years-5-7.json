@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-2950340-years-5-7",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "2950340",
+    "name": "LEGO Harry Potter Collection"
+  },
+  "name": "LEGO Harry Potter Collection",
+  "defaults": {
+    "program": "Years 5-7/harry2.exe"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Years 5–7",
+    "tested_kit": "0.17",
+    "tested_firmware": "12.20",
+    "tested_date": "2026-11-02",
+    "status": "works",
+    "notes": "The default, LHPC.exe, doesn't start. Report: https://github.com/leolobato/playden-ps5/issues/420",
+    "author": "EpicKitten",
+    "contributors": []
+  }
+}

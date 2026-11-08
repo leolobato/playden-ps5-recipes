@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-1127400-mouse",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "1127400",
+    "name": "Mindustry"
+  },
+  "name": "Mindustry",
+  "defaults": {
+    "controller_preset": "mouse"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Mouse preset",
+    "tested_kit": "0.18",
+    "tested_firmware": "12.20",
+    "tested_date": "2026-11-03",
+    "status": "works",
+    "notes": "Report: https://github.com/leolobato/playden-ps5/issues/528",
+    "author": "EpicKitten",
+    "contributors": []
+  }
+}

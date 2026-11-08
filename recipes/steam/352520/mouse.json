@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-352520-mouse",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "352520",
+    "name": "The Silent Age"
+  },
+  "name": "The Silent Age",
+  "defaults": {
+    "controller_preset": "mouse"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Mouse preset",
+    "tested_kit": "0.10",
+    "tested_firmware": "13.60",
+    "tested_date": "",
+    "status": "works",
+    "notes": "Options confirms the Unity settings window, then the left stick and Cross play.",
+    "author": "leolobato",
+    "contributors": []
+  }
+}

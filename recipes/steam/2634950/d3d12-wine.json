@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-2634950-d3d12-wine",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "2634950",
+    "name": "Tokyo Xtreme Racer"
+  },
+  "name": "Tokyo Xtreme Racer",
+  "defaults": {
+    "d3d12": "wine"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Wine's Direct3D 12",
+    "tested_kit": "0.18",
+    "tested_firmware": "11.00",
+    "tested_date": "2026-11-04",
+    "status": "works",
+    "notes": "Report: https://github.com/leolobato/playden-ps5/issues/597",
+    "author": "phistylez",
+    "contributors": []
+  }
+}

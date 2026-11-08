@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-250900-repentance-plus",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "250900",
+    "name": "The Binding of Isaac: Rebirth"
+  },
+  "name": "The Binding of Isaac: Rebirth",
+  "defaults": {
+    "program_arguments": "--luaheapsize=0"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Repentance+",
+    "tested_kit": "0.18",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-10-28",
+    "status": "works",
+    "notes": "Only needed with Repentance+, which crashes at start without it. The base game runs with default settings. Report: https://github.com/leolobato/playden-ps5/issues/224",
+    "author": "fleurc",
+    "contributors": []
+  }
+}

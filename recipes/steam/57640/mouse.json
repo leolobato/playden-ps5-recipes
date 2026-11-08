@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-57640-mouse",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "57640",
+    "name": "Broken Sword 1 – Director's Cut"
+  },
+  "name": "Broken Sword 1 – Director's Cut",
+  "defaults": {
+    "controller_preset": "mouse"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Mouse preset",
+    "tested_kit": "0.18",
+    "tested_firmware": "13.40",
+    "tested_date": "2026-11-02",
+    "status": "works",
+    "notes": "Report: https://github.com/leolobato/playden-ps5/issues/450",
+    "author": "EdgeSync",
+    "contributors": []
+  }
+}

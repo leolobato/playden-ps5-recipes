@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-385710-launcher",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "385710",
+    "name": "INK"
+  },
+  "name": "INK",
+  "defaults": {
+    "start_through_launcher": "on"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Through its launcher",
+    "tested_kit": "0.18",
+    "tested_firmware": "12.20",
+    "tested_date": "2026-11-03",
+    "status": "works",
+    "notes": "Report: https://github.com/leolobato/playden-ps5/issues/541",
+    "author": "EpicKitten",
+    "contributors": []
+  }
+}

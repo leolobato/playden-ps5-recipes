@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-696180-mouse-launcher",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "696180",
+    "name": "Bullet Witch"
+  },
+  "name": "Bullet Witch",
+  "defaults": {
+    "controller_preset": "mouse"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Mouse preset for the launcher",
+    "tested_kit": "0.11",
+    "tested_firmware": "13.60",
+    "tested_date": "",
+    "status": "works",
+    "notes": "The launcher needs Enter: press Options on Play Game. Playden installs PhysX on the first Play.",
+    "author": "leolobato",
+    "contributors": []
+  }
+}

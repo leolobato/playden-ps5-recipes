@@ -1,0 +1,24 @@
+{
+  "recipe_id": "community-steam-4678800-defaults",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "4678800",
+    "name": "Train Sim World 7"
+  },
+  "made_on": "imported",
+  "name": "Train Sim World 7",
+  "defaults": {},
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Playden's defaults",
+    "tested_kit": "0.17",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-01",
+    "status": "works",
+    "notes": "The game's program is in TS2Prototype/Binaries/Win64. Report: https://github.com/leolobato/playden-ps5/issues/359",
+    "author": "Blitz-rgg",
+    "contributors": []
+  }
+}

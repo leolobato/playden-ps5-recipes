@@ -1,0 +1,24 @@
+{
+  "recipe_id": "community-steam-1167630-opengl",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "1167630",
+    "name": "Teardown"
+  },
+  "name": "Teardown",
+  "graphics": "opengl",
+  "defaults": {},
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "OpenGL",
+    "tested_kit": "0.10",
+    "tested_firmware": "9.40",
+    "tested_date": "2026-10-13",
+    "status": "works",
+    "notes": "In the game: borderless window, 1920×1080, render scale 75%, and the two settings below render scale on Low. Report: https://github.com/leolobato/playden-ps5/issues/16",
+    "author": "kernelpanicz",
+    "contributors": []
+  }
+}

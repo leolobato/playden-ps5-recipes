@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-339800-mouse",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "339800",
+    "name": "HuniePop"
+  },
+  "name": "HuniePop",
+  "defaults": {
+    "controller_preset": "mouse"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Mouse preset",
+    "tested_kit": "0.18",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-03",
+    "status": "playable",
+    "notes": "Mouse-only game. The pointer doesn't line up with the scaled 4:3 picture. Report: https://github.com/leolobato/playden-ps5/issues/512",
+    "author": "cubones",
+    "contributors": []
+  }
+}

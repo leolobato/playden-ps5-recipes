@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-1875580-vkd3d",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "1875580",
+    "name": "Mina the Hollower"
+  },
+  "name": "Mina the Hollower",
+  "defaults": {
+    "d3d12": "vkd3d-proton"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Direct3D 12 on vkd3d-proton",
+    "tested_kit": "0.11",
+    "tested_firmware": "13.60",
+    "tested_date": "",
+    "status": "works",
+    "notes": "Without it the game asks to use software rendering.",
+    "author": "leolobato",
+    "contributors": []
+  }
+}

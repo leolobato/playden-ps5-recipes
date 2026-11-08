@@ -1,0 +1,24 @@
+{
+  "recipe_id": "community-steam-63660-opengl",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "63660",
+    "name": "Myst: Masterpiece Edition"
+  },
+  "name": "Myst: Masterpiece Edition",
+  "graphics": "opengl",
+  "defaults": {},
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "OpenGL",
+    "tested_kit": "0.17",
+    "tested_firmware": "12.20",
+    "tested_date": "2026-11-02",
+    "status": "works",
+    "notes": "Report: https://github.com/leolobato/playden-ps5/issues/417",
+    "author": "EpicKitten",
+    "contributors": []
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-239030-mouse",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "239030",
+    "name": "Papers, Please"
+  },
+  "name": "Papers, Please",
+  "defaults": {
+    "controller_preset": "mouse"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Mouse preset",
+    "tested_kit": "0.10",
+    "tested_firmware": "13.60",
+    "tested_date": "",
+    "status": "works",
+    "notes": "Mouse-only game.",
+    "author": "leolobato",
+    "contributors": []
+  }
+}

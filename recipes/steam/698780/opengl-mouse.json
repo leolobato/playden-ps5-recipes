@@ -1,0 +1,28 @@
+{
+  "recipe_id": "community-steam-698780-opengl-mouse",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "698780",
+    "name": "Doki Doki Literature Club!"
+  },
+  "made_on": "imported",
+  "name": "Doki Doki Literature Club!",
+  "graphics": "opengl",
+  "defaults": {
+    "controller_preset": "mouse",
+    "program": "lib/windows-i686/DDLC.exe"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "OpenGL, Mouse preset",
+    "tested_kit": "0.13",
+    "tested_firmware": "11.60",
+    "tested_date": "2026-10-28",
+    "status": "works",
+    "notes": "itch.io copy. It crashes on DXVK. Report: https://github.com/leolobato/playden-ps5/issues/264",
+    "author": "heterostasis",
+    "contributors": []
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "recipe_id": "community-imported-unigine-heaven-direct3d9",
+  "recipe_version": 1,
+  "game": {
+    "store": "imported",
+    "key": "unigine-heaven",
+    "name": "Unigine Heaven Benchmark 4.0"
+  },
+  "name": "Unigine Heaven Benchmark 4.0",
+  "defaults": {
+    "program": "bin/Heaven.exe",
+    "program_arguments": "-video_app direct3d9"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Direct3D 9",
+    "tested_kit": "0.19",
+    "tested_firmware": "12.20",
+    "tested_date": "2026-11-06",
+    "status": "playable",
+    "notes": "On Direct3D 11 a haze covers most of the screen. Report: https://github.com/leolobato/playden-ps5/issues/677",
+    "author": "EpicKitten",
+    "contributors": []
+  }
+}

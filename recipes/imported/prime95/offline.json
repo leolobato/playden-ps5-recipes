@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-imported-prime95-offline",
+  "recipe_version": 1,
+  "game": {
+    "store": "imported",
+    "key": "prime95",
+    "name": "Prime95"
+  },
+  "name": "Prime95",
+  "defaults": {
+    "controller_preset": "mouse"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Offline",
+    "tested_kit": "0.19",
+    "tested_firmware": "12.20",
+    "tested_date": "2026-11-05",
+    "status": "works",
+    "notes": "Put prime.txt with UsePrimenet=0 beside the program to keep it offline. Report: https://github.com/leolobato/playden-ps5/issues/674",
+    "author": "EpicKitten",
+    "contributors": []
+  }
+}

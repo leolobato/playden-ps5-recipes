@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-10180-mouse",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "10180",
+    "name": "Call of Duty: Modern Warfare 2 (2009)"
+  },
+  "name": "Call of Duty: Modern Warfare 2 (2009)",
+  "defaults": {
+    "controller_preset": "mouse"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Mouse preset",
+    "tested_kit": "0.18",
+    "tested_firmware": "12.20",
+    "tested_date": "2026-11-03",
+    "status": "playable",
+    "notes": "No controller support. Runs at 640×480 and the menus are hard to use. Closing it from the PS menu brings its safe-mode prompt on the next start. Report: https://github.com/leolobato/playden-ps5/issues/508",
+    "author": "EpicKitten",
+    "contributors": []
+  }
+}

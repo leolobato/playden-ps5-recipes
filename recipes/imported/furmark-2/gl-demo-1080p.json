@@ -1,0 +1,27 @@
+{
+  "recipe_id": "community-imported-furmark-2-gl-demo-1080p",
+  "recipe_version": 1,
+  "game": {
+    "store": "imported",
+    "key": "furmark-2",
+    "name": "FurMark 2"
+  },
+  "name": "FurMark 2",
+  "defaults": {
+    "controller_preset": "mouse",
+    "program": "furmark.exe",
+    "program_arguments": "--demo furmark-gl --p1080"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "OpenGL demo, 1080p",
+    "tested_kit": "0.19",
+    "tested_firmware": "12.20",
+    "tested_date": "2026-11-05",
+    "status": "works",
+    "notes": "Report: https://github.com/leolobato/playden-ps5/issues/672",
+    "author": "EpicKitten",
+    "contributors": []
+  }
+}

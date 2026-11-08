@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-24240-mouse",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "24240",
+    "name": "PAYDAY: The Heist"
+  },
+  "name": "PAYDAY: The Heist",
+  "defaults": {
+    "controller_preset": "mouse"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Mouse preset",
+    "tested_kit": "0.18",
+    "tested_firmware": "12.20",
+    "tested_date": "2026-11-04",
+    "status": "works",
+    "notes": "The game has no controller support. Report: https://github.com/leolobato/playden-ps5/issues/601",
+    "author": "EpicKitten",
+    "contributors": []
+  }
+}

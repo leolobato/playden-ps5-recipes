@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-212680-mouse",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "212680",
+    "name": "FTL: Faster Than Light"
+  },
+  "name": "FTL: Faster Than Light",
+  "defaults": {
+    "controller_preset": "mouse"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Mouse preset",
+    "tested_kit": "0.10",
+    "tested_firmware": "13.60",
+    "tested_date": "",
+    "status": "works",
+    "notes": "Left stick moves the pointer, Cross clicks. It asks for the language on every start.",
+    "author": "leolobato",
+    "contributors": []
+  }
+}

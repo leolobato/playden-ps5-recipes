@@ -1,0 +1,27 @@
+{
+  "recipe_id": "community-steam-2215430-no-launcher-1080p",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "2215430",
+    "name": "Ghost of Tsushima DIRECTOR'S CUT"
+  },
+  "name": "Ghost of Tsushima DIRECTOR'S CUT",
+  "defaults": {
+    "button.options": "enter",
+    "program_arguments": "-nolauncher",
+    "resolution": "1920x1080"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "No launcher, 1080p",
+    "tested_kit": "0.12",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-10-24",
+    "status": "works",
+    "notes": "Keep it at 1080p or lower: higher stays loading. At start it says the PlayStation SDK isn't installed: press the button mapped to Enter to close it. Report: https://github.com/leolobato/playden-ps5/issues/126",
+    "author": "Jiggy-Jingwood",
+    "contributors": []
+  }
+}

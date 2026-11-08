@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-1623730-d3d12-wine",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "1623730",
+    "name": "Palworld"
+  },
+  "name": "Palworld",
+  "defaults": {
+    "d3d12": "wine"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Wine's Direct3D 12",
+    "tested_kit": "0.17",
+    "tested_firmware": "13.42",
+    "tested_date": "2026-11-02",
+    "status": "works",
+    "notes": "Playable at 1080p with Frame Gen x2, with slight random stutter. Report: https://github.com/leolobato/playden-ps5/issues/481",
+    "author": "testixulartorsion12",
+    "contributors": []
+  }
+}

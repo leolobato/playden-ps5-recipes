@@ -1,0 +1,26 @@
+{
+  "recipe_id": "community-steam-1684930-vkd3d",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "1684930",
+    "name": "CULTIC"
+  },
+  "name": "CULTIC",
+  "graphics": "dxvk",
+  "defaults": {
+    "d3d12": "vkd3d-proton"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Direct3D 12 on vkd3d-proton",
+    "tested_kit": "0.11",
+    "tested_firmware": "13.60",
+    "tested_date": "",
+    "status": "works",
+    "notes": "With Direct3D 11 it stays on a black loading screen.",
+    "author": "leolobato",
+    "contributors": []
+  }
+}

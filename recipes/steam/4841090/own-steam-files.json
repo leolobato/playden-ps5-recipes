@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-4841090-own-steam-files",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "4841090",
+    "name": "Code RAPID Demo"
+  },
+  "name": "Code RAPID Demo",
+  "defaults": {
+    "steam_features": "game"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Game's own Steam files",
+    "tested_kit": "0.17",
+    "tested_firmware": "10.01",
+    "tested_date": "2026-11-05",
+    "status": "works",
+    "notes": "Report: https://github.com/leolobato/playden-ps5/issues/646",
+    "author": "ChRoNbOx",
+    "contributors": []
+  }
+}

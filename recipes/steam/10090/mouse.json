@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-10090-mouse",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "10090",
+    "name": "Call of Duty: World at War"
+  },
+  "name": "Call of Duty: World at War",
+  "defaults": {
+    "controller_preset": "mouse"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Mouse preset",
+    "tested_kit": "0.15",
+    "tested_firmware": "13.42",
+    "tested_date": "2026-10-30",
+    "status": "works",
+    "notes": "The menus need a pointer. A USB mouse and keyboard also work. Report: https://github.com/leolobato/playden-ps5/issues/305",
+    "author": "evoluketion",
+    "contributors": []
+  }
+}

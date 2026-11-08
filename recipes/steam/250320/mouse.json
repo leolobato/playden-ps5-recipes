@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-250320-mouse",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "250320",
+    "name": "The Wolf Among Us"
+  },
+  "name": "The Wolf Among Us",
+  "defaults": {
+    "controller_preset": "mouse"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Mouse preset",
+    "tested_kit": "0.13",
+    "tested_firmware": "12.40",
+    "tested_date": "2026-10-27",
+    "status": "works",
+    "notes": "Set the resolution in the game: Playden's Resolution doesn't reach it. Report: https://github.com/leolobato/playden-ps5/issues/218",
+    "author": "pl69100",
+    "contributors": []
+  }
+}
