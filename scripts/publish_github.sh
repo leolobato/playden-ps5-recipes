@@ -65,6 +65,20 @@ trap 'rm -rf "$out"' EXIT
 python3 scripts/build_release.py --out "$out" ${CHECKER:+--checker "$CHECKER"}
 
 if [ "${DRY_RUN:-0}" = 1 ]; then
+  # A preview of the notes CI writes: this build's index.json against the last release's.
+  notes_args=()
+  if [ -n "$last" ]; then
+    notes_args+=(--since "$last")
+    if command -v gh >/dev/null && gh release download "$last" --repo "$REPOSITORY" --pattern index.json \
+        --dir "$out/prev" >/dev/null 2>&1; then
+      notes_args+=(--old "$out/prev/index.json")
+    else
+      echo "(couldn't download index.json from $last; the notes list every recipe as added)"
+    fi
+  fi
+  echo
+  python3 scripts/release_notes.py --new "$out/index.json" ${notes_args[@]+"${notes_args[@]}"}
+  echo
   git --no-pager diff --stat -- "${LISTS[@]}"
   git --no-pager diff -U0 -- "${LISTS[@]}" | grep -E '^\+[^+]' || echo "(the lists don't change)"
   git checkout --quiet -- "${LISTS[@]}"
