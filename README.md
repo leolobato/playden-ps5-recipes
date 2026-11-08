@@ -144,7 +144,9 @@ builds both files; the same recipes always give the same zip. It also records ev
 (`<store>/<key> <slug>`). Both files only grow, so votes for older revisions still count and slugs are never reused.
 
 Releases are tagged `r<YYYYMMDD>.<n>`. Before tagging, the maintainer runs `scripts/build_release.py` and commits the
-updated `revisions.lst` and `slugs.lst`. CI builds and attaches the files when the tag is pushed.
+updated `revisions.lst` and `slugs.lst`. CI builds and attaches the files when the tag is pushed. `make release` does
+all of it from a clean `main` that matches GitHub's, with the commit and tag signed by the maintainer's GPG key;
+`make release-dry-run` shows what it would record, and `make release-watch` follows CI until the release has its files.
 
 ## License
 
