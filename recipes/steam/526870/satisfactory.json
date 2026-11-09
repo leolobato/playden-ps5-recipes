@@ -36,8 +36,8 @@
     "tested_kit": "0.21",
     "tested_firmware": "13.60",
     "tested_date": "2026-11-09",
-    "status": "works",
-    "notes": "Wait for authentication popup to pass, then can play offline",
+    "status": "playable",
+    "notes": "Wait for authentication popup to pass, then can play offline. Note theres a gross visual flashing bug, however game seems playable otherwise",
     "author": "isaacm080",
     "contributors": []
   }
