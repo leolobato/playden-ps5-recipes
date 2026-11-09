@@ -1,0 +1,41 @@
+{
+  "recipe_id": "community-steam-12210-gtaiv-patch-only",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "12210",
+    "name": "Grand Theft Auto IV: The Complete Edition"
+  },
+  "name": "Grand Theft Auto IV: The Complete Edition",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "GTAIV.exe",
+      "executable": "GTAIV/GTAIV.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "d3d10,d3d9,dxgi",
+  "defaults": {},
+  "locked": [],
+  "executable": "GTAIV/GTAIV.exe",
+  "community": {
+    "format_version": 1,
+    "title": "GTAIV Patch ONLY",
+    "tested_kit": "0.21",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-09",
+    "status": "works",
+    "notes": "For use with the playden patch from the discord",
+    "author": "isaacm080",
+    "contributors": []
+  }
+}
