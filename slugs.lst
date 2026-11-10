@@ -8,6 +8,7 @@ steam/6060 mouse
 steam/6920 game-program
 steam/10090 mouse
 steam/10180 mouse
+steam/12210 gtaiv-patch-only
 steam/24240 mouse
 steam/35720 game-program
 steam/40700 vkd3d-proton
@@ -18,6 +19,7 @@ steam/212680 mouse
 steam/230270 opengl
 steam/239030 mouse
 steam/242760 launcher
+steam/242760 the-forest
 steam/244430 mouse
 steam/250320 mouse
 steam/250900 repentance-plus
@@ -32,6 +34,7 @@ steam/405640 mouse-preset
 steam/412830 game-program
 steam/427520 mouse
 steam/489830 game-program
+steam/526870 satisfactory
 steam/544580 game-program
 steam/696180 mouse-launcher
 steam/698780 opengl-mouse
