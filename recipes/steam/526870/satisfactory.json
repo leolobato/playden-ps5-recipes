@@ -1,0 +1,44 @@
+{
+  "recipe_id": "community-steam-526870-satisfactory",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "526870",
+    "name": "Satisfactory"
+  },
+  "name": "Satisfactory",
+  "launch_entries": [
+    {
+      "id": "launch-1",
+      "label": "FactoryGameSteam.exe",
+      "executable": "FactoryGameSteam.exe",
+      "working_directory": "",
+      "arguments": "-NO_EOS_OVERLAY"
+    }
+  ],
+  "arguments": "-dx11",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "unreal",
+  "defaults": {
+    "steam_features": "emulate",
+    "window_view": "desktop"
+  },
+  "locked": [],
+  "executable": "FactoryGameSteam.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Satisfactory",
+    "tested_kit": "0.21",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-09",
+    "status": "playable",
+    "notes": "Wait for authentication popup to pass, then can play offline. Note theres a gross visual flashing bug, however game seems playable otherwise",
+    "author": "isaacm080",
+    "contributors": []
+  }
+}
