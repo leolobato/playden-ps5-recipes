@@ -186,6 +186,9 @@ all of it from a clean `main` that matches GitHub's, with the commit and tag sig
 `make release-dry-run` shows what it would record, and `make release-watch` follows CI until the release has its files.
 The **Release** workflow (Actions > Release > Run workflow on `main`, or the Playden admin page) does the same in CI,
 signed with the maintainer's release key from the `release` environment, and attaches the files itself.
+It also runs every day at 02:30 UTC and publishes when a file under `recipes/` changed since the last release, so a
+merged pull request reaches players by the next morning without anyone starting a release; a day with nothing new
+publishes nothing.
 The release notes list what's new since the previous release (recipes added, updated and removed, by game and recipe
 ID), from `scripts/release_notes.py` comparing the two releases' `index.json`; the dry run previews them.
 

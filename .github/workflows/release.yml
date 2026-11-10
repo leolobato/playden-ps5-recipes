@@ -1,14 +1,18 @@
 # SPDX-License-Identifier: CC0-1.0
 # Publishes a recipes release when started by hand (Actions > Release > Run workflow on main) or by the Playden admin
-# page. The same steps as `make release` (scripts/publish_github.sh): build and check the recipes, commit
-# revisions.lst and slugs.lst, tag the next r<YYYYMMDD>.<n>, push both. The commit and the tag are signed with the
-# maintainer's release key (the RELEASE_GPG_KEY secret of the `release` environment, which only main can use).
+# page, and every day at 02:30 UTC when a recipe changed since the last release (a scheduled run with nothing new
+# stops after its first step and publishes nothing). The same steps as `make release` (scripts/publish_github.sh):
+# build and check the recipes, commit revisions.lst and slugs.lst, tag the next r<YYYYMMDD>.<n>, push both. The
+# commit and the tag are signed with the maintainer's release key (the RELEASE_GPG_KEY secret of the `release`
+# environment, which only main can use).
 #
 # A tag pushed with the workflow's token starts no other workflow, so this one also builds recipes.zip and
 # index.json from the tag and attaches them with the release notes (scripts/attach_release.sh, as Recipes does).
 name: Release
 
 on:
+  schedule:
+    - cron: '30 2 * * *'
   workflow_dispatch:
     inputs:
       tag:
@@ -33,10 +37,25 @@ jobs:
           ref: main
           fetch-depth: 0
 
+      # Only a scheduled run asks: one started by hand always goes on (and publish_github.sh still refuses a main
+      # that is already released).
+      - name: Anything new?
+        id: new
+        run: |
+          last="$(git tag --list 'r*' --sort=-creatordate | grep -E '^r[0-9]{8}\.[0-9]+$' | head -n1 || true)"
+          if [ "${{ github.event_name }}" != schedule ] || [ -z "$last" ] || ! git diff --quiet "$last" HEAD -- recipes/; then
+            echo "release=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "release=false" >> "$GITHUB_OUTPUT"
+            echo "No recipe changed since $last; nothing to release." | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
+
       - name: Unit tests
+        if: steps.new.outputs.release == 'true'
         run: python3 -m unittest discover -s scripts -p 'test_*.py'
 
       - name: Signing key
+        if: steps.new.outputs.release == 'true'
         env:
           RELEASE_GPG_KEY: ${{ secrets.RELEASE_GPG_KEY }}
         run: |
@@ -51,11 +70,13 @@ jobs:
           echo "signing as $email with ${fpr: -16}"
 
       - name: Commit the lists, tag and push
+        if: steps.new.outputs.release == 'true'
         env:
           TAG: ${{ inputs.tag }}
         run: scripts/publish_github.sh
 
       - name: Build and attach to the release
+        if: steps.new.outputs.release == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
