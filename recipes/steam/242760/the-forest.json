@@ -1,0 +1,44 @@
+{
+  "recipe_id": "community-steam-242760-the-forest",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "242760",
+    "name": "The Forest"
+  },
+  "name": "The Forest",
+  "launch_entries": [
+    {
+      "id": "launch-1",
+      "label": "Launch",
+      "executable": "TheForest.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "-force-d3d11 {resolution}",
+  "resolution_arguments": "-screen-width {w} -screen-height {h}",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "unity,d3d11,d3d12,d3d9,dxgi,opengl,vulkan",
+  "defaults": {
+    "start_through_launcher": "on",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "TheForest.exe",
+  "community": {
+    "format_version": 1,
+    "title": "The Forest",
+    "tested_kit": "0.21",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-10",
+    "status": "untested",
+    "notes": "",
+    "author": "isaacm080",
+    "contributors": []
+  }
+}
