@@ -1,0 +1,46 @@
+{
+  "recipe_id": "community-steam-750920-tomb-raider-4k-default",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "750920",
+    "name": "Shadow of the Tomb Raider"
+  },
+  "name": "Shadow of the Tomb Raider",
+  "launch_entries": [
+    {
+      "id": "launch-1",
+      "label": "Launch SOTTR",
+      "executable": "SOTTR.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n;d3d12,d3d12core=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "d3d11,d3d12,dxgi",
+  "defaults": {
+    "d3d12": "vkd3d-proton",
+    "resolution": "3840x2160",
+    "start_through_launcher": "on",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "SOTTR.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Tomb Raider 4K Default",
+    "tested_kit": "0.23",
+    "tested_firmware": "12.20",
+    "tested_date": "2026-11-11",
+    "status": "works",
+    "notes": "",
+    "author": "epickitten",
+    "contributors": []
+  }
+}
