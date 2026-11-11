@@ -1,0 +1,48 @@
+{
+  "recipe_id": "community-steam-2333000-silver-pines",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "2333000",
+    "name": "Silver Pines"
+  },
+  "made_on": "imported",
+  "name": "Silver Pines",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "Carpenter.exe",
+      "executable": "Carpenter.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "-d3d11",
+  "resolution_arguments": "-screen-width {w} -screen-height {h}",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "unity-il2cpp,d3d11,d3d12,d3d9,dxgi,opengl,vulkan",
+  "defaults": {
+    "controller": "playstation",
+    "frame_limit": "60",
+    "performance_overlay": "on",
+    "resolution": "2560x1440",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "Carpenter.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Silver Pines",
+    "tested_kit": "0.20",
+    "tested_firmware": "10.01",
+    "tested_date": "2026-11-11",
+    "status": "works",
+    "notes": "",
+    "author": "ChRoNbOx",
+    "contributors": []
+  }
+}
