@@ -1,0 +1,45 @@
+{
+  "recipe_id": "community-imported-metal-gear-rising-chronbox",
+  "recipe_version": 1,
+  "game": {
+    "store": "imported",
+    "key": "metal-gear-rising",
+    "name": "Metal Gear Rising"
+  },
+  "name": "Metal Gear Rising",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "METAL GEAR RISING REVENGEANCE.exe",
+      "executable": "METAL GEAR RISING REVENGEANCE.exe",
+      "working_directory": "",
+      "arguments": "-dx11"
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n;d3d12,d3d12core=n",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "d3d9",
+  "defaults": {
+    "d3d12": "vkd3d-proton",
+    "performance_overlay": "on",
+    "resolution": "2560x1440",
+    "start_through_launcher": "on"
+  },
+  "locked": [],
+  "executable": "METAL GEAR RISING REVENGEANCE.exe",
+  "community": {
+    "format_version": 1,
+    "tested_kit": "0.20",
+    "tested_firmware": "10.01",
+    "tested_date": "2026-11-11",
+    "status": "untested",
+    "notes": "",
+    "author": "ChRoNbOx",
+    "contributors": []
+  }
+}
