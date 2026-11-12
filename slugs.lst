@@ -18,6 +18,7 @@ steam/105600 game-program
 steam/212680 mouse
 steam/230270 opengl
 steam/239030 mouse
+steam/239140 dying-light-skip-logos
 steam/242760 launcher
 steam/242760 the-forest
 steam/244430 mouse
@@ -39,6 +40,7 @@ steam/526870 satisfactory
 steam/544580 game-program
 steam/696180 mouse-launcher
 steam/698780 opengl-mouse
+steam/750920 tomb-raider-4k-default
 steam/782330 vulkan
 steam/1026680 launcher
 steam/1089980 mouse
@@ -54,6 +56,7 @@ steam/1684930 vkd3d
 steam/1875580 vkd3d
 steam/2111190 vkd3d
 steam/2215430 no-launcher-1080p
+steam/2333000 silver-pines
 steam/2634950 d3d12-wine
 steam/2744010 mouse
 steam/2796180 menu-pointer
@@ -66,5 +69,6 @@ steam/4678800 defaults
 steam/4841090 own-steam-files
 imported/7-zip benchmark
 imported/furmark-2 gl-demo-1080p
+imported/metal-gear-rising chronbox
 imported/prime95 offline
 imported/unigine-heaven direct3d9
