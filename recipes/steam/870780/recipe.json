@@ -1,0 +1,45 @@
+{
+  "recipe_id": "community-steam-870780-recipe",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "870780",
+    "name": "Control Ultimate Edition"
+  },
+  "name": "Control Ultimate Edition",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "Control_DX11.exe",
+      "executable": "Control_DX11.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n;d3d12,d3d12core=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "d3d11,d3d12,dxgi",
+  "defaults": {
+    "d3d12": "vkd3d-proton",
+    "resolution": "2560x1440",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "Control_DX11.exe",
+  "community": {
+    "format_version": 1,
+    "tested_kit": "0.25",
+    "tested_firmware": "13.40",
+    "tested_date": "2026-11-13",
+    "status": "works",
+    "notes": "",
+    "author": "",
+    "contributors": [],
+    "title": "DirectX 11 version at 1440p"
+  }
+}
