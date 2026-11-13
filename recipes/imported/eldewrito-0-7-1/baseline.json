@@ -1,0 +1,43 @@
+{
+  "recipe_id": "community-imported-eldewrito-0-7-1-baseline",
+  "recipe_version": 1,
+  "game": {
+    "store": "imported",
+    "key": "eldewrito-0-7-1",
+    "name": "ElDewrito_0.7.1"
+  },
+  "name": "ElDewrito_0.7.1",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "eldorado.exe",
+      "executable": "eldorado.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "--single-process --in-process-gpu --disable-gpu --disable-gpu-compositing",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "d3d9",
+  "defaults": {
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "eldorado.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Patched with the ElDewrito Playden Patcher",
+    "tested_kit": "0.25",
+    "tested_firmware": "12.20",
+    "tested_date": "2026-11-13",
+    "status": "works",
+    "notes": "Needs a custom DLL: patch the game with https://github.com/EpicKitten/ElDewrito_Playden_Patcher (server browser and settings menu). Report: https://github.com/leolobato/playden-ps5/issues/840",
+    "author": "epickitten",
+    "contributors": []
+  }
+}
