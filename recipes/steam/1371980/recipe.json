@@ -38,6 +38,7 @@
     "status": "works",
     "notes": "",
     "author": "",
-    "contributors": []
+    "contributors": [],
+    "title": "60 fps frame limit"
   }
 }
