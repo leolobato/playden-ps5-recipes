@@ -1,0 +1,43 @@
+{
+  "recipe_id": "community-steam-1371980-recipe",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "1371980",
+    "name": "No Rest for the Wicked"
+  },
+  "name": "No Rest for the Wicked",
+  "launch_entries": [
+    {
+      "id": "launch-1",
+      "label": "NoRestForTheWicked.exe",
+      "executable": "NoRestForTheWicked.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "-force-d3d11 {resolution}",
+  "resolution_arguments": "-screen-width {w} -screen-height {h}",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "unity-il2cpp,d3d11,d3d12,d3d9,dxgi,opengl,vulkan",
+  "defaults": {
+    "frame_limit": "60",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "NoRestForTheWicked.exe",
+  "community": {
+    "format_version": 1,
+    "tested_kit": "0.25",
+    "tested_firmware": "12.70",
+    "tested_date": "2026-11-13",
+    "status": "works",
+    "notes": "",
+    "author": "",
+    "contributors": []
+  }
+}
