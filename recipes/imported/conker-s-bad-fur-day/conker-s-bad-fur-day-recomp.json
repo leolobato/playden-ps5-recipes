@@ -1,0 +1,44 @@
+{
+  "recipe_id": "community-imported-conker-s-bad-fur-day-conker-s-bad-fur-day-recomp",
+  "recipe_version": 1,
+  "game": {
+    "store": "imported",
+    "key": "conker-s-bad-fur-day",
+    "name": "Conker's Bad Fur Day"
+  },
+  "name": "Conker's Bad Fur Day",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "ConkerBFDReloaded.exe",
+      "executable": "ConkerBFDReloaded.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n;d3d12,d3d12core=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "d3d12,dxgi,vulkan",
+  "defaults": {
+    "d3d12": "vkd3d-proton",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "ConkerBFDReloaded.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Conker's Bad Fur Day Recomp",
+    "tested_kit": "0.24-dev.20261111.2",
+    "tested_firmware": "10.01",
+    "tested_date": "2026-11-13",
+    "status": "works",
+    "notes": "Rom File Must be placed Manually in the bottle Via The web interface. Runs Perfect.",
+    "author": "ChRoNbOx",
+    "contributors": []
+  }
+}
