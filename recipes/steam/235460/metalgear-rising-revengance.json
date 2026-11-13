@@ -1,0 +1,45 @@
+{
+  "recipe_id": "community-steam-235460-metalgear-rising-revengance",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "235460",
+    "name": "Metal Gear Rising"
+  },
+  "made_on": "imported",
+  "name": "Metal Gear Rising",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "METAL GEAR RISING REVENGEANCE.exe",
+      "executable": "METAL GEAR RISING REVENGEANCE.exe",
+      "working_directory": "",
+      "arguments": "-dx11"
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "d3d9",
+  "defaults": {
+    "performance_overlay": "on",
+    "resolution": "2560x1440"
+  },
+  "locked": [],
+  "executable": "METAL GEAR RISING REVENGEANCE.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Patched exe (MGRPatcher): 60 fps, 1440p, file limits",
+    "tested_kit": "0.24-dev.20261111.2",
+    "tested_firmware": "10.01",
+    "tested_date": "2026-11-13",
+    "status": "works",
+    "notes": "Patched .Exe using MGRPatcher.( changed 60fps homescreen, 2560x1440p Res, and File Unlimter. Mods also work.",
+    "author": "ChRoNbOx",
+    "contributors": []
+  }
+}
