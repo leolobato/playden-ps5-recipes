@@ -16,7 +16,7 @@
       "arguments": ""
     }
   ],
-  "arguments": "--single-process --in-process-gpu",
+  "arguments": "--single-process --in-process-gpu --disable-gpu --disable-gpu-compositing",
   "resolution_arguments": "",
   "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
   "architecture": "pe32",
@@ -25,14 +25,13 @@
   "graphics": "dxvk",
   "detected": "d3d9",
   "defaults": {
-    "start_through_launcher": "on",
     "steam_features": "emulate"
   },
   "locked": [],
   "executable": "eldorado.exe",
   "community": {
     "format_version": 1,
-    "title": "Baseline",
+    "title": "Works well",
     "tested_kit": "0.25",
     "tested_firmware": "12.20",
     "tested_date": "2026-11-13",
