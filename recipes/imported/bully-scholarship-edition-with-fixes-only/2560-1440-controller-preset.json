@@ -1,0 +1,45 @@
+{
+  "recipe_id": "community-imported-bully-scholarship-edition-with-fixes-only-2560-1440-controller-preset",
+  "recipe_version": 1,
+  "game": {
+    "store": "imported",
+    "key": "bully-scholarship-edition-with-fixes-only",
+    "name": "Bully Scholarship Edition With Fixes Only"
+  },
+  "name": "Bully Scholarship Edition With Fixes Only",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "Bully.exe",
+      "executable": "Bully.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "d3d10,d3d9,ddraw,dxgi",
+  "defaults": {
+    "controller_preset": "gamepad",
+    "resolution": "2560x1440",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "Bully.exe",
+  "community": {
+    "format_version": 1,
+    "title": "2560×1440, Controller preset Gamepad",
+    "tested_kit": "0.25",
+    "tested_firmware": "12.70",
+    "tested_date": "2026-11-13",
+    "status": "playable",
+    "notes": "",
+    "author": "Bellserkers",
+    "contributors": []
+  }
+}
