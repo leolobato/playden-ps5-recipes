@@ -1,0 +1,46 @@
+{
+  "recipe_id": "community-imported-rush-the-rock-projectr",
+  "recipe_version": 1,
+  "game": {
+    "store": "imported",
+    "key": "rush-the-rock",
+    "name": "Rush The Rock"
+  },
+  "name": "Rush The Rock",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "project-r.exe",
+      "executable": "bin/project-r.exe",
+      "working_directory": "",
+      "arguments": "--rtr"
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "vulkan",
+  "defaults": {
+    "performance_overlay": "on",
+    "refresh": "120",
+    "resolution": "2560x1440",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "bin/project-r.exe",
+  "community": {
+    "format_version": 1,
+    "title": "ProjectR",
+    "tested_kit": "0.24-dev.20261111.2",
+    "tested_firmware": "10.01",
+    "tested_date": "2026-11-13",
+    "status": "works",
+    "notes": "Rom files from Win installation must b e manually placed in bottle via web interface.  config file (TOML) in APPDATA. needs to be chnaged to represent new location of Emu data folder. Used Dacuments for this folder",
+    "author": "ChRoNbOx",
+    "contributors": []
+  }
+}
