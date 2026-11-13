@@ -34,7 +34,7 @@
   "executable": "bin/project-r.exe",
   "community": {
     "format_version": 1,
-    "title": "ProjectR",
+    "title": "ProjectR port, ROM files added by hand",
     "tested_kit": "0.24-dev.20261111.2",
     "tested_firmware": "10.01",
     "tested_date": "2026-11-13",
