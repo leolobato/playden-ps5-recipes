@@ -1,0 +1,47 @@
+{
+  "recipe_id": "community-imported-diddy-kong-racing-diddy-kong-racing-recompiled",
+  "recipe_version": 1,
+  "game": {
+    "store": "imported",
+    "key": "diddy-kong-racing",
+    "name": "Diddy Kong Racing!"
+  },
+  "name": "Diddy Kong Racing!",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "DKR-R.exe",
+      "executable": "DKR-R.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "unknown",
+  "defaults": {
+    "performance_overlay": "on",
+    "refresh": "120",
+    "resolution": "2560x1440",
+    "start_through_launcher": "on",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "DKR-R.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Diddy Kong Racing Recompiled",
+    "tested_kit": "0.24-dev.20261111.2",
+    "tested_firmware": "10.01",
+    "tested_date": "2026-11-13",
+    "status": "works",
+    "notes": "Rom File Must manually be placed in bottle via Web Interface. Used prospero/documents folder.",
+    "author": "ChRoNbOx",
+    "contributors": []
+  }
+}
