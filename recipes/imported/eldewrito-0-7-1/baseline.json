@@ -36,7 +36,7 @@
     "tested_firmware": "12.20",
     "tested_date": "2026-11-13",
     "status": "works",
-    "notes": "Needs custom DLL",
+    "notes": "Needs a custom DLL: patch the game with https://github.com/EpicKitten/ElDewrito_Playden_Patcher (server browser and settings menu). Report: https://github.com/leolobato/playden-ps5/issues/840",
     "author": "epickitten",
     "contributors": []
   }
