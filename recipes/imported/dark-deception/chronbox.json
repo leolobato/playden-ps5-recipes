@@ -1,0 +1,46 @@
+{
+  "recipe_id": "community-imported-dark-deception-chronbox",
+  "recipe_version": 1,
+  "game": {
+    "store": "imported",
+    "key": "dark-deception",
+    "name": "Dark Deception"
+  },
+  "name": "Dark Deception",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "DDeception.exe",
+      "executable": "DDeception.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "-dx11",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "unreal",
+  "defaults": {
+    "performance_overlay": "on",
+    "refresh": "120",
+    "resolution": "2560x1440",
+    "start_through_launcher": "on"
+  },
+  "locked": [],
+  "executable": "DDeception.exe",
+  "community": {
+    "format_version": 1,
+    "title": "DirectX 11 mode at 1440p",
+    "tested_kit": "0.24-dev.20261111.2",
+    "tested_firmware": "10.01",
+    "tested_date": "2026-11-13",
+    "status": "untested",
+    "notes": "",
+    "author": "ChRoNbOx",
+    "contributors": []
+  }
+}
