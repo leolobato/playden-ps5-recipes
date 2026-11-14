@@ -1,0 +1,47 @@
+{
+  "recipe_id": "community-steam-1363080-start-through-a-launcher-on",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "1363080",
+    "name": "Manor Lords"
+  },
+  "name": "Manor Lords",
+  "launch_entries": [
+    {
+      "id": "launch-1",
+      "label": "ManorLords-Win64-Shipping.exe",
+      "executable": "ManorLords/Binaries/Win64/ManorLords-Win64-Shipping.exe",
+      "working_directory": "ManorLords/Binaries/Win64",
+      "arguments": ""
+    }
+  ],
+  "arguments": "-dx12",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n;d3d12,d3d12core=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "unreal5,dx12",
+  "defaults": {
+    "d3d12": "vkd3d-proton",
+    "launcher_controller_preset": "gamepad",
+    "start_through_launcher": "on",
+    "steam_features": "emulate",
+    "window_view": "desktop"
+  },
+  "locked": [],
+  "executable": "ManorLords/Binaries/Win64/ManorLords-Win64-Shipping.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Start through a launcher on",
+    "tested_kit": "0.25",
+    "tested_firmware": "12.70",
+    "tested_date": "2026-11-14",
+    "status": "untested",
+    "notes": "",
+    "author": "",
+    "contributors": []
+  }
+}
