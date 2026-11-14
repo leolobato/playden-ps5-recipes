@@ -1,0 +1,44 @@
+{
+  "recipe_id": "community-steam-223470-steam-features-game-s-own-files",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "223470",
+    "name": "POSTAL 2"
+  },
+  "name": "POSTAL 2",
+  "launch_entries": [
+    {
+      "id": "launch-1",
+      "label": "POSTAL 2",
+      "executable": "System/Postal2.exe",
+      "working_directory": "System",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "d3d8",
+  "defaults": {
+    "controller": "playstation",
+    "windows_version": "win81"
+  },
+  "locked": [],
+  "executable": "System/Postal2.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Steam features Game's own files",
+    "tested_kit": "0.25",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-14",
+    "status": "works",
+    "notes": "",
+    "author": "",
+    "contributors": []
+  }
+}
