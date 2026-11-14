@@ -1,0 +1,44 @@
+{
+  "recipe_id": "community-steam-1113560-3840-2160",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "1113560",
+    "name": "NieR Replicant ver.1.22474487139..."
+  },
+  "name": "NieR Replicant ver.1.22474487139...",
+  "launch_entries": [
+    {
+      "id": "launch-1",
+      "label": "NieR Replicant ver.1.22474487139.exe",
+      "executable": "NieR Replicant ver.1.22474487139.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "d3d11,dxgi",
+  "defaults": {
+    "resolution": "3840x2160",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "NieR Replicant ver.1.22474487139.exe",
+  "community": {
+    "format_version": 1,
+    "title": "3840×2160",
+    "tested_kit": "0.25",
+    "tested_firmware": "13.40",
+    "tested_date": "2026-11-14",
+    "status": "works",
+    "notes": "Game is capped at 60fps without mods. Runs well at 4k 60fps medium settings with drops to late 30s. Tested on fat ps5 fw13.40",
+    "author": "",
+    "contributors": []
+  }
+}
