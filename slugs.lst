@@ -17,6 +17,7 @@ steam/63660 opengl
 steam/105600 game-program
 steam/212680 mouse
 steam/230270 opengl
+steam/235460 metalgear-rising-revengance
 steam/239030 mouse
 steam/239140 dying-light-skip-logos
 steam/242760 launcher
@@ -42,12 +43,14 @@ steam/696180 mouse-launcher
 steam/698780 opengl-mouse
 steam/750920 tomb-raider-4k-default
 steam/782330 vulkan
+steam/870780 recipe
 steam/1026680 launcher
 steam/1089980 mouse
 steam/1091500 cyberpunk2077-prepped-for-mods
 steam/1091500 vkd3d
 steam/1127400 mouse
 steam/1167630 opengl
+steam/1371980 recipe
 steam/1375400 vkd3d
 steam/1546860 mouse
 steam/1592280 opengl
@@ -68,7 +71,12 @@ steam/3743790 game-program
 steam/4678800 defaults
 steam/4841090 own-steam-files
 imported/7-zip benchmark
+imported/conker-s-bad-fur-day conker-s-bad-fur-day-recomp
+imported/dark-deception chronbox
+imported/diddy-kong-racing diddy-kong-racing-recompiled
+imported/eldewrito-0-7-1 baseline
 imported/furmark-2 gl-demo-1080p
 imported/metal-gear-rising chronbox
 imported/prime95 offline
+imported/rush-the-rock projectr
 imported/unigine-heaven direct3d9
