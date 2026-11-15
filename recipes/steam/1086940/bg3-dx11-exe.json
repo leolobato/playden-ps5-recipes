@@ -1,0 +1,44 @@
+{
+  "recipe_id": "community-steam-1086940-bg3-dx11-exe",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "1086940",
+    "name": "Baldur's Gate 3"
+  },
+  "name": "Baldur's Gate 3",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "bg3_dx11.exe",
+      "executable": "bin/bg3_dx11.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "dxgi",
+  "defaults": {
+    "controller": "playstation",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "bin/bg3_dx11.exe",
+  "community": {
+    "format_version": 1,
+    "title": "bg3_dx11.exe",
+    "tested_kit": "0.28",
+    "tested_firmware": "12.20",
+    "tested_date": "2026-11-15",
+    "status": "works",
+    "notes": "",
+    "author": "epickitten",
+    "contributors": []
+  }
+}
