@@ -1,0 +1,47 @@
+{
+  "recipe_id": "community-imported-moonlighter-2-the-endless-vault-ps",
+  "recipe_version": 1,
+  "game": {
+    "store": "imported",
+    "key": "moonlighter-2-the-endless-vault",
+    "name": "Moonlighter 2 - The Endless Vault"
+  },
+  "name": "Moonlighter 2 - The Endless Vault",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "Moonlighter 2 The Endless Vault.exe",
+      "executable": "Moonlighter 2 The Endless Vault.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "-force-d3d11 {resolution}",
+  "resolution_arguments": "-screen-width {w} -screen-height {h}",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "unity-il2cpp,d3d11,d3d12,d3d9,dxgi,opengl,vulkan",
+  "defaults": {
+    "controller": "playstation",
+    "framegen": "2",
+    "refresh": "120",
+    "steam_features": "emulate",
+    "windows_version": "win7"
+  },
+  "locked": [],
+  "executable": "Moonlighter 2 The Endless Vault.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Ps",
+    "tested_kit": "0.25",
+    "tested_firmware": "12.00",
+    "tested_date": "2026-11-15",
+    "status": "untested",
+    "notes": "",
+    "author": "AT",
+    "contributors": []
+  }
+}
