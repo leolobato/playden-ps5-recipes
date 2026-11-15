@@ -1,0 +1,43 @@
+{
+  "recipe_id": "community-steam-251570-7-days-exe",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "251570",
+    "name": "7 Days to Die"
+  },
+  "name": "7 Days to Die",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "7DaysToDie.exe",
+      "executable": "7DaysToDie.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "-force-d3d11 {resolution}",
+  "resolution_arguments": "-screen-width {w} -screen-height {h}",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "unity,d3d11,d3d12,d3d9,dxgi,opengl,vulkan,anticheat",
+  "defaults": {
+    "steam_features": "online"
+  },
+  "locked": [],
+  "executable": "7DaysToDie.exe",
+  "community": {
+    "format_version": 1,
+    "title": "7 days.exe",
+    "tested_kit": "0.25",
+    "tested_firmware": "13.00",
+    "tested_date": "2026-11-15",
+    "status": "works",
+    "notes": "",
+    "author": "TEDDYMASTER3000",
+    "contributors": []
+  }
+}
