@@ -33,7 +33,7 @@
   "executable": "okami.exe",
   "community": {
     "format_version": 1,
-    "title": "Window view Entire desktop",
+    "title": "Entire desktop view, touchpad as mouse",
     "tested_kit": "0.25",
     "tested_firmware": "12.20",
     "tested_date": "2026-11-14",
