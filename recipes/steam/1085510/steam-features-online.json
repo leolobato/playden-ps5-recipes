@@ -37,7 +37,7 @@
     "tested_firmware": "13.60",
     "tested_date": "2026-11-15",
     "status": "works",
-    "notes": "",
+    "notes": "Steam features = Online (experimental) shows only after adding the line online-steam to /data/playden/features.txt over FTP and restarting Playden (0.11.0-beta.4 or later).",
     "author": "💀Cubones💀",
     "contributors": []
   }
