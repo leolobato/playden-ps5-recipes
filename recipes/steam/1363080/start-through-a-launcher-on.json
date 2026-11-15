@@ -35,7 +35,7 @@
   "executable": "ManorLords/Binaries/Win64/ManorLords-Win64-Shipping.exe",
   "community": {
     "format_version": 1,
-    "title": "Start through a launcher on",
+    "title": "DirectX 12 through the launcher, Gamepad preset",
     "tested_kit": "0.25",
     "tested_firmware": "12.70",
     "tested_date": "2026-11-14",
