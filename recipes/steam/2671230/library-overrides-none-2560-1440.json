@@ -1,0 +1,45 @@
+{
+  "recipe_id": "community-steam-2671230-library-overrides-none-2560-1440",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "2671230",
+    "name": "BLADECHIMERA"
+  },
+  "name": "BLADECHIMERA",
+  "launch_entries": [
+    {
+      "id": "launch-1",
+      "label": "BLADE_CHIMERA.exe",
+      "executable": "BLADE_CHIMERA.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "opengl",
+  "detected": "gamemaker,d3d11",
+  "defaults": {
+    "refresh": "120",
+    "resolution": "2560x1440",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "BLADE_CHIMERA.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Library overrides none, 2560×1440",
+    "tested_kit": "0.25",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-16",
+    "status": "works",
+    "notes": "",
+    "author": "NKB",
+    "contributors": []
+  }
+}
