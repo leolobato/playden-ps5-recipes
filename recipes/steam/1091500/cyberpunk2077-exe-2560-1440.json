@@ -35,7 +35,7 @@
   "executable": "bin/x64/Cyberpunk2077.exe",
   "community": {
     "format_version": 1,
-    "title": "Cyberpunk2077.exe, 2560×1440",
+    "title": "Main program at 1440p with frame generation",
     "tested_kit": "0.25",
     "tested_firmware": "13.20",
     "tested_date": "2026-11-15",
