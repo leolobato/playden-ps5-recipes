@@ -32,7 +32,7 @@
   "executable": "bin/bg3_dx11.exe",
   "community": {
     "format_version": 1,
-    "title": "bg3_dx11.exe",
+    "title": "DirectX 11 program, PlayStation controller",
     "tested_kit": "0.28",
     "tested_firmware": "12.20",
     "tested_date": "2026-11-15",
