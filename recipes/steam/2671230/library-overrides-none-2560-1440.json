@@ -33,7 +33,7 @@
   "executable": "BLADE_CHIMERA.exe",
   "community": {
     "format_version": 1,
-    "title": "Library overrides none, 2560×1440",
+    "title": "OpenGL at 1440p, 120 Hz",
     "tested_kit": "0.25",
     "tested_firmware": "13.60",
     "tested_date": "2026-11-16",
