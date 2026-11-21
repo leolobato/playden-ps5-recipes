@@ -65,11 +65,11 @@ class ContentTest(CheckTestCase):
     def test_settings_since_comes_from_the_checked_repository(self):
         path = self.repo.place("good.json")
         data = json.loads(self.repo.read(path))
-        data["defaults"]["controller_layout"] = "a = pad:b"
+        data["defaults"]["future_setting"] = "1"
         self.repo.write(path, json.dumps(data, indent=2) + "\n")
-        self.assertRefused(path, "defaults sets controller_layout, which isn't a Playden setting")
+        self.assertRefused(path, "defaults sets future_setting, which isn't a Playden setting")
         table = json.loads(self.repo.read("settings-since.json"))
-        table["settings"]["controller_layout"] = "0.13.0"
+        table["settings"]["future_setting"] = "99.0.0"
         self.repo.write("settings-since.json", json.dumps(table))
         self.assertEqual(self.refusals(path), [])
 
