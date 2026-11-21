@@ -1,0 +1,44 @@
+{
+  "recipe_id": "community-steam-2424420-controller-playstation",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "2424420",
+    "name": "Avatar Legends: The Fighting Game"
+  },
+  "name": "Avatar Legends: The Fighting Game ",
+  "launch_entries": [
+    {
+      "id": "launch-1",
+      "label": "Atla.exe",
+      "executable": "Atla.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "d3d11,d3d9,dxgi,vulkan",
+  "defaults": {
+    "controller": "playstation",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "Atla.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Controller PlayStation controller",
+    "tested_kit": "0.32",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-21",
+    "status": "works",
+    "notes": "",
+    "author": "",
+    "contributors": []
+  }
+}
