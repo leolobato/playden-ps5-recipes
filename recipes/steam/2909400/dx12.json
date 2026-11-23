@@ -1,0 +1,28 @@
+{
+  "recipe_id": "community-steam-2909400-dx12",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "2909400",
+    "name": "FINAL FANTASY VII REBIRTH"
+  },
+  "name": "FINAL FANTASY VII REBIRTH",
+  "defaults": {
+    "d3d12": "vkd3d-proton",
+    "environment": "VKD3D_FEATURE_LEVEL=12_2",
+    "program_arguments": "-dx12",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Direct3D 12 at feature level 12_2",
+    "tested_kit": "0.35",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-23",
+    "status": "works",
+    "notes": "The game asks Direct3D 12 for feature level 12_2, which is faked on the PS5: a later scene could still crash. Report: https://github.com/leolobato/playden-ps5/issues/1297",
+    "author": "leolobato",
+    "contributors": []
+  }
+}
