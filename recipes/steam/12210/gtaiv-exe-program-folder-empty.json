@@ -1,0 +1,43 @@
+{
+  "recipe_id": "community-steam-12210-gtaiv-exe-program-folder-empty",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "12210",
+    "name": "Grand Theft Auto IV: The Complete Edition"
+  },
+  "name": "Grand Theft Auto IV: The Complete Edition",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "GTAIV.exe",
+      "executable": "GTAIV/GTAIV.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "unknown",
+  "defaults": {
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "GTAIV/GTAIV.exe",
+  "community": {
+    "format_version": 1,
+    "title": "GTAIV.exe, Program folder empty",
+    "tested_kit": "0.36",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-26",
+    "status": "works",
+    "notes": "",
+    "author": "Starrplusplus",
+    "contributors": []
+  }
+}
