@@ -33,7 +33,7 @@
   "executable": "HelloNeighborReborn/Binaries/Win64/HelloNeighborReborn.exe",
   "community": {
     "format_version": 1,
-    "title": "Controller preset Gamepad",
+    "title": "Gamepad, touchpad as Enter",
     "tested_kit": "0.32",
     "tested_firmware": "13.42",
     "tested_date": "2026-11-27",
