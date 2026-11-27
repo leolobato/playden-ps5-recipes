@@ -1,0 +1,62 @@
+{
+  "recipe_id": "community-imported-anime-stardust-ultimate-v5-controller-keyboard-and-mouse",
+  "recipe_version": 1,
+  "game": {
+    "store": "imported",
+    "key": "anime-stardust-ultimate-v5",
+    "name": "Anime Stardust Ultimate (V5)"
+  },
+  "name": "Anime Stardust Ultimate (V5)",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "Anime Stardust Ultimate.exe",
+      "executable": "Anime Stardust Ultimate (V5)/Anime Stardust Ultimate.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "",
+  "resolution_arguments": "",
+  "dll_overrides": "",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "opengl",
+  "detected": "opengl,vulkan",
+  "defaults": {
+    "button.circle": "Y",
+    "button.cross": "F",
+    "button.down": "S",
+    "button.l1": "G",
+    "button.l2": "H",
+    "button.l3": "Z",
+    "button.left": "A",
+    "button.options": "enter",
+    "button.r1": "Q",
+    "button.r2": "E",
+    "button.r3": "X",
+    "button.right": "D",
+    "button.square": "R",
+    "button.touchpad": "escape",
+    "button.triangle": "T",
+    "button.up": "W",
+    "controller": "keyboard",
+    "controller_preset": "arrows",
+    "steam_features": "emulate",
+    "touchpad_hold": "mouse"
+  },
+  "locked": [],
+  "executable": "Anime Stardust Ultimate (V5)/Anime Stardust Ultimate.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Keyboard keys on the controller",
+    "tested_kit": "0.36",
+    "tested_firmware": "13.00",
+    "tested_date": "2026-11-26",
+    "status": "works",
+    "notes": "",
+    "author": "T.N",
+    "contributors": []
+  }
+}
