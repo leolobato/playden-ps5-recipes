@@ -1,0 +1,25 @@
+{
+  "recipe_id": "community-steam-3047070-playstation-controller",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "3047070",
+    "name": "X-Out: Resurfaced"
+  },
+  "name": "X-Out: Resurfaced",
+  "defaults": {
+    "controller": "playstation"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "PlayStation controller",
+    "tested_kit": "0.36",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-27",
+    "status": "works",
+    "notes": "",
+    "author": "Leo Lobato",
+    "contributors": []
+  }
+}

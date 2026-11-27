@@ -1,0 +1,27 @@
+{
+  "recipe_id": "community-steam-1205280-mouse-preset",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "1205280",
+    "name": "Roadwarden Demo"
+  },
+  "name": "Roadwarden Demo",
+  "defaults": {
+    "controller": "keyboard",
+    "controller_preset": "mouse",
+    "pointer_stick": "left_stick"
+  },
+  "locked": [],
+  "community": {
+    "format_version": 2,
+    "title": "Mouse preset",
+    "tested_kit": "0.36",
+    "tested_firmware": "13.60",
+    "tested_date": "2026-11-27",
+    "status": "works",
+    "notes": "",
+    "author": "Leo Lobato",
+    "contributors": []
+  }
+}
