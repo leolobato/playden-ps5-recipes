@@ -1,0 +1,43 @@
+{
+  "recipe_id": "community-steam-208200-gamepad",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "208200",
+    "name": "DOOM 3: BFG Edition"
+  },
+  "name": "DOOM 3: BFG Edition",
+  "launch_entries": [
+    {
+      "id": "launch-1",
+      "label": "Launch Doom 3: BFG Edition",
+      "executable": "Doom3BFG.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "+set in_useJoystick 1",
+  "resolution_arguments": "",
+  "dll_overrides": "",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "opengl",
+  "detected": "opengl,shared-section",
+  "defaults": {
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "Doom3BFG.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Gamepad in menus",
+    "tested_kit": "0.36",
+    "tested_firmware": "13.20",
+    "tested_date": "2026-11-27",
+    "status": "untested",
+    "notes": "+set in_useJoystick 1 makes the engine read the controller: without it the menus ignore the DualSense (the saved profile has in_useJoystick 0). Needs a Playden newer than 0.12.0-beta.5 with leolobato/playden-ps5#1336 (CPU ~MHz registry keys); older builds crash at start with a division by zero. Tested up to the main menu and Settings only, not gameplay.",
+    "author": "argrento",
+    "contributors": []
+  }
+}
