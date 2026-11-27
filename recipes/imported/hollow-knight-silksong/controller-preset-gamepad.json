@@ -1,0 +1,44 @@
+{
+  "recipe_id": "community-imported-hollow-knight-silksong-controller-preset-gamepad",
+  "recipe_version": 1,
+  "game": {
+    "store": "imported",
+    "key": "hollow-knight-silksong",
+    "name": "Hollow Knight Silksong"
+  },
+  "name": "Hollow Knight Silksong",
+  "launch_entries": [
+    {
+      "id": "program",
+      "label": "Hollow Knight Silksong.exe",
+      "executable": "Hollow Knight Silksong.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "-force-d3d11 {resolution}",
+  "resolution_arguments": "-screen-width {w} -screen-height {h}",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe64",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "unity,d3d11,d3d12,d3d9,dxgi,opengl,vulkan",
+  "defaults": {
+    "controller_preset": "gamepad",
+    "steam_features": "emulate"
+  },
+  "locked": [],
+  "executable": "Hollow Knight Silksong.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Gamepad controls",
+    "tested_kit": "0.28",
+    "tested_firmware": "13.40",
+    "tested_date": "2026-11-26",
+    "status": "works",
+    "notes": "",
+    "author": "",
+    "contributors": []
+  }
+}
