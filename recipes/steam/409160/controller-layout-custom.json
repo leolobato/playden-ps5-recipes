@@ -1,0 +1,46 @@
+{
+  "recipe_id": "community-steam-409160-controller-layout-custom",
+  "recipe_version": 1,
+  "game": {
+    "store": "steam",
+    "key": "409160",
+    "name": "Dr. Langeskov, The Tiger, and The Terribly Cursed Emerald: A Whirlwind Heist"
+  },
+  "name": "Dr. Langeskov, The Tiger, and The Terribly Cursed Emerald: A Whirlwind Heist",
+  "launch_entries": [
+    {
+      "id": "launch-1",
+      "label": "Launch",
+      "executable": "DrLangeskov.exe",
+      "working_directory": "",
+      "arguments": ""
+    }
+  ],
+  "arguments": "-force-d3d11 {resolution}",
+  "resolution_arguments": "-screen-width {w} -screen-height {h}",
+  "dll_overrides": "d3d8,d3d9,d3d10core,d3d11,dxgi=n",
+  "architecture": "pe32",
+  "runtime": "wine-wow64",
+  "prefix": "game",
+  "graphics": "dxvk",
+  "detected": "unity-legacy5,d3d11,d3d9,dxgi,opengl",
+  "defaults": {
+    "controller": "xinput",
+    "controller_layout": "cross = pad:a;circle = pad:b;square = pad:x;triangle = pad:y;l1 = pad:lb;r1 = pad:rb;l2 = pad:lt;r2 = pad:rt;l3 = pad:ls;r3 = pad:rs;up = pad:dpad_up;down = pad:dpad_down;left = pad:dpad_left;right = pad:dpad_right;options = pad:start;create = pad:back;touchpad_left = key:enter;touchpad_right = pad:guide;left_stick = pad:left_stick;right_stick = pad:right_stick",
+    "steam_features": "emulate",
+    "touchpad_hold": "mouse"
+  },
+  "locked": [],
+  "executable": "DrLangeskov.exe",
+  "community": {
+    "format_version": 1,
+    "title": "Controller layout Custom",
+    "tested_kit": "0.36",
+    "tested_firmware": "13.42",
+    "tested_date": "2026-11-28",
+    "status": "works",
+    "notes": "Just get past the launcher with mouse control or enter and the game runs perfectly",
+    "author": "",
+    "contributors": []
+  }
+}
