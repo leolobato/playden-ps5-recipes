@@ -35,6 +35,7 @@ steam/71260 through-its-launcher
 steam/105600 game-program
 steam/108600 frame-limit-60
 steam/108800 program-crysis2-exe
+steam/208200 gamepad
 steam/212680 mouse
 steam/212910 steam-features-online
 steam/213610 program-sonic2app-exe
@@ -96,6 +97,7 @@ steam/582010 default-config
 steam/587620 window-view-entire-desktop
 steam/599140 playstation-controller
 steam/627270 2560-1440-120-hz-on
+steam/645630 3840-2160-controller-preset
 steam/645630 mouse-preset
 steam/646570 slaythespire-exe-120-hz-on
 steam/674750 steam-features-online
@@ -124,6 +126,7 @@ steam/1091500 cyberpunk2077-exe
 steam/1091500 cyberpunk2077-exe-2560-1440
 steam/1091500 cyberpunk2077-prepped-for-mods
 steam/1091500 vkd3d
+steam/1092720 controller-preset-gamepad
 steam/1097150 steam-features-online
 steam/1113560 3840-2160
 steam/1127400 mouse
@@ -132,6 +135,7 @@ steam/1169040 steam-emulator-game-s-library
 steam/1173770 3840-2160-touchpad-hold-switch
 steam/1174180 touchpad-hold-switch-to-mouse
 steam/1190170 playstation-controller
+steam/1205280 mouse-preset
 steam/1280060 playstation-controller
 steam/1337010 playstation-controller
 steam/1363080 start-through-a-launcher-on
@@ -175,6 +179,7 @@ steam/2806640 talos1
 steam/2909400 dx12
 steam/2950340 years-1-4
 steam/2950340 years-5-7
+steam/3047070 playstation-controller
 steam/3199360 gamepad-preset-playstation-contr
 steam/3241660 steam-features-online
 steam/3271280 steam-features-online
@@ -204,6 +209,7 @@ gog/1325415523 opengl
 gog/1423049311 cyberpunk2077-exe-program-folder
 gog/1882554410 playstation-controller
 imported/7-zip benchmark
+imported/anime-stardust-ultimate-v5 controller-keyboard-and-mouse
 imported/black-mesa 3840-2160-controller-layout
 imported/bully-scholarship-edition-with-fixes-only 2560-1440-controller-preset
 imported/colin-mcrae-rally-2 start-through-a-launcher-on-3840
@@ -214,6 +220,7 @@ imported/door-kickers-action-squad pizle
 imported/eldewrito-0-7-1 baseline
 imported/furmark-2 gl-demo-1080p
 imported/gtaiv gta-4
+imported/hollow-knight-silksong controller-preset-gamepad
 imported/marvels-avengers controller-preset-gamepad
 imported/max-payne-3 3840-2160
 imported/medal-of-honor-2010 3840-2160-120-hz-on
